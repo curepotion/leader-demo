@@ -497,7 +497,7 @@
       flex: 1;
       text-align: center;
 
-      font-size: 30px;
+      font-size: 24px;
       font-weight: bold;
       color: #000;
       cursor: pointer;
@@ -784,10 +784,85 @@
 
 <!--Factory Slider-->
 <div class="container">
+
+
+
+
+  <div class="factor-slider">
+    <div class="factor-slider-track">
+      <div class="factor-slider-slide active" data-image="./img/factory/烤箱.webp" data-description="專業級大烤箱">
+        <img src="./img/factory/烤箱-s.webp" alt="專業級大烤箱">
+        <p>專業級大烤箱</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/x-ray.webp" data-description="X-Ray 包裝檢測儀">
+        <img src="./img/factory/x-ray-s.webp" alt="X-Ray包裝檢測儀">
+        <p>X-Ray 包裝檢測儀</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/Air shower空氣浴塵室.webp" data-description="Air shower 空氣浴塵室">
+        <img src="./img/factory/Air shower空氣浴塵室-s.webp" alt="Air shower空氣浴塵室">
+        <p>Air shower 空氣浴塵室</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/VEMAG連續式真空充機.webp" data-description="VEMAG 連續式真空充填機">
+        <img src="./img/factory/VEMAG連續式真空填機-s.webp" alt="VEMAG連續式真空充填機">
+        <p>VEMAG 連續式真空充填機</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/刨肉絞肉機.webp" data-description="刨肉絞肉機">
+        <img src="./img/factory/刨肉絞肉機-s.webp" alt="刨肉絞肉機">
+        <p>刨肉絞肉機</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/雙軸混和桶.webp" data-description="雙軸混和桶">
+        <img src="./img/factory/雙軸混和桶-s.webp" alt="雙軸混和桶">
+        <p>雙軸混和桶</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/高速切片機.webp" data-description="高速切片機">
+        <img src="./img/factory/高速切片機-s.webp" alt="高速切片機">
+        <p>高速切片機</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/蒸箱.webp" data-description="蒸箱">
+        <img src="./img/factory/蒸箱-s.webp" alt="蒸箱">
+        <p>蒸箱</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/連續式封口機.webp" data-description="連續式封口機">
+        <img src="./img/factory/連續式封口機-s.webp" alt="連續式封口機">
+        <p>連續式封口機</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/真空按摩桶.webp" data-description="真空按摩桶">
+        <img src="./img/factory/真空按摩桶-s.webp" alt="真空按摩桶">
+        <p>真空按摩桶</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/精密成型機.webp" data-description="精密成型機">
+        <img src="./img/factory/精密成型機-s.webp" alt="精密成型機">
+        <p>精密成型機</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/實驗室.webp" data-description="實驗室">
+        <img src="./img/factory/實驗室-s.webp" alt="實驗室">
+        <p>實驗室</p>
+      </div>
+      <div class="factor-slider-slide" data-image="./img/factory/金屬檢驗機.webp" data-description="金屬檢驗機">
+        <img src="./img/factory/金屬檢驗機-s.webp" alt="金屬檢驗機">
+        <p>金屬檢驗機</p>
+      </div>
+
+    </div>
+    <div class="factor-slider-arrows">
+      <button class="factor-slider-prev"></button>
+      <button class="factor-slider-next"></button>
+    </div>
+  </div>
+</div>
+
+  <!-- Lightbox Modal -->
+  <div style="z-index: 100000;" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close">&times;</button>
+      <img src="" alt="Lightbox Image">
+      <p></p>
+    </div>
+  </div>
   <style>
     /* Slider Styles */
     .factor-slider {
-      width: 100%;
+   
       margin: 50px auto;
       overflow: hidden;
       position: relative;
@@ -797,20 +872,19 @@
       display: flex;
       transition: transform 0.9s ease;
       padding-top: 40px;
-      gap:10px;
+   
     }
 
     .factor-slider-slide {
-      min-width: 33.33%; /* Adjust based on slidesToShow */
       box-sizing: border-box;
-      padding: 10px;
+      padding: 12px;
       text-align: center;
       cursor: pointer; /* Indicate click for lightbox */
     }
 
     .factor-slider-slide img {
       width: 100%;
-      min-width:200px;
+      min-width: 200px;
       border-radius: 10px;
       margin-bottom: 10px;
     }
@@ -818,8 +892,8 @@
     .factor-slider-slide p {
       margin: 10px 0;
       font-size: 24px;
-      color:#000000;
-      font-weight:600;
+      color: #000000;
+      font-weight: 600;
     }
 
     .factor-slider-slide.active img {
@@ -956,131 +1030,80 @@
       }
     }
   </style>
-
-  <div class="factor-slider">
-    <div class="factor-slider-track">
-      <div class="factor-slider-slide active" data-image="./img/factory/烤箱.webp" data-description="專業級大烤箱">
-        <img src="./img/factory/烤箱-s.webp" alt="專業級大烤箱">
-        <p>專業級大烤箱</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/x-ray.webp" data-description="X-Ray 包裝檢測儀">
-        <img src="./img/factory/x-ray-s.webp" alt="X-Ray包裝檢測儀">
-        <p>X-Ray 包裝檢測儀</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/Air shower空氣浴塵室.webp" data-description="Air shower 空氣浴塵室">
-        <img src="./img/factory/Air shower空氣浴塵室-s.webp" alt="Air shower空氣浴塵室">
-        <p>Air shower 空氣浴塵室</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/VEMAG連續式真空充機.webp" data-description="VEMAG 連續式真空充填機">
-        <img src="./img/factory/VEMAG連續式真空填機-s.webp" alt="VEMAG連續式真空充填機">
-        <p>VEMAG 連續式真空充填機</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/刨肉絞肉機.webp" data-description="刨肉絞肉機">
-        <img src="./img/factory/刨肉絞肉機-s.webp" alt="刨肉絞肉機">
-        <p>刨肉絞肉機</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/雙軸混和桶.webp" data-description="雙軸混和桶">
-        <img src="./img/factory/雙軸混和桶-s.webp" alt="雙軸混和桶">
-        <p>雙軸混和桶</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/高速切片機.webp" data-description="高速切片機">
-        <img src="./img/factory/高速切片機-s.webp" alt="高速切片機">
-        <p>高速切片機</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/蒸箱.webp" data-description="蒸箱">
-        <img src="./img/factory/蒸箱-s.webp" alt="蒸箱">
-        <p>蒸箱</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/連續式封口機.webp" data-description="連續式封口機">
-        <img src="./img/factory/連續式封口機-s.webp" alt="連續式封口機">
-        <p>連續式封口機</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/真空按摩桶.webp" data-description="真空按摩桶">
-        <img src="./img/factory/真空按摩桶-s.webp" alt="真空按摩桶">
-        <p>真空按摩桶</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/精密成型機.webp" data-description="精密成型機">
-        <img src="./img/factory/精密成型機-s.webp" alt="精密成型機">
-        <p>精密成型機</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/實驗室.webp" data-description="實驗室">
-        <img src="./img/factory/實驗室-s.webp" alt="實驗室">
-        <p>實驗室</p>
-      </div>
-      <div class="factor-slider-slide" data-image="./img/factory/金屬檢驗機.webp" data-description="金屬檢驗機">
-        <img src="./img/factory/金屬檢驗機-s.webp" alt="金屬檢驗機">
-        <p>金屬檢驗機</p>
-      </div>
-
-    </div>
-    <div class="factor-slider-arrows">
-      <button class="factor-slider-prev"></button>
-      <button class="factor-slider-next"></button>
-    </div>
-  </div>
-
-  <!-- Lightbox Modal -->
-  <div style="z-index: 100000;" class="lightbox-modal">
-    <div class="lightbox-content">
-      <button class="lightbox-close">&times;</button>
-      <img src="" alt="Lightbox Image">
-      <p></p>
-    </div>
-  </div>
-
   <script>
-    (function () {
-      const slider = document.querySelector('.factor-slider');
-      const track = slider.querySelector('.factor-slider-track');
-      const slides = Array.from(track.children);
-      const prevButton = slider.querySelector('.factor-slider-prev');
-      const nextButton = slider.querySelector('.factor-slider-next');
-      const modal = document.querySelector('.lightbox-modal');
-      const modalImage = modal.querySelector('img');
-      const modalDescription = modal.querySelector('p');
-      const modalClose = modal.querySelector('.lightbox-close');
+(function () {
+  const slider = document.querySelector('.factor-slider');
+  const track = slider.querySelector('.factor-slider-track');
+  const slides = Array.from(track.children);
+  const prevButton = slider.querySelector('.factor-slider-prev');
+  const nextButton = slider.querySelector('.factor-slider-next');
+  const modal = document.querySelector('.lightbox-modal');
+  const modalImage = modal.querySelector('img');
+  const modalDescription = modal.querySelector('p');
+  const modalClose = modal.querySelector('.lightbox-close');
 
-      let currentIndex = 0;
+  let currentIndex = 0;
 
-      function updateSliderPosition() {
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        const offset = (slider.offsetWidth - slideWidth) / 2;
-        track.style.transform = `translateX(calc(${-currentIndex * slideWidth}px + ${offset}px))`;
+  function updateSliderPosition() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const containerWidth = slider.offsetWidth;
 
-        slides.forEach((slide, index) => {
-          if (index === currentIndex) {
-            slide.classList.add('active');
-          } else {
-            slide.classList.remove('active');
-          }
-        });
+    // Calculate offset for centering
+    const centerOffset = (containerWidth - slideWidth) / 1.8;
+
+    // Handle scaling effect for the active slide
+    const activeSlide = slides[currentIndex];
+    const scaledWidth = slideWidth * 1.1; // Since the scale is 1.1
+    const scaleOffset = (scaledWidth - slideWidth) / 2;
+
+    // Adjust translation to include the scaling offset
+    const translateX = -currentIndex * slideWidth + centerOffset - scaleOffset;
+
+    // Apply translation to the track
+    track.style.transform = `translateX(${translateX}px)`;
+
+    // Highlight the active slide
+    slides.forEach((slide, index) => {
+      if (index === currentIndex) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
       }
+    });
+  }
 
-      function moveToSlide(index) {
-        currentIndex = (index + slides.length) % slides.length; // Loop slides
-        updateSliderPosition();
-      }
+  function moveToSlide(index) {
+    currentIndex = (index + slides.length) % slides.length; // Loop through slides
+    updateSliderPosition();
+  }
 
-      slides.forEach(slide => {
-        slide.addEventListener('click', () => {
-          const image = slide.getAttribute('data-image');
-          const description = slide.getAttribute('data-description');
-          modalImage.src = image;
-          modalDescription.textContent = description;
-          modal.classList.add('active');
-        });
-      });
+  // Add click event listeners to slides for the lightbox modal
+  slides.forEach(slide => {
+    slide.addEventListener('click', () => {
+      const image = slide.getAttribute('data-image');
+      const description = slide.getAttribute('data-description');
+      modalImage.src = image;
+      modalDescription.textContent = description;
+      modal.classList.add('active');
+    });
+  });
 
-      modalClose.addEventListener('click', () => {
-        modal.classList.remove('active');
-      });
+  // Close modal when the close button is clicked
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
 
-      prevButton.addEventListener('click', () => moveToSlide(currentIndex - 1));
-      nextButton.addEventListener('click', () => moveToSlide(currentIndex + 1));
+  // Add click event listeners to navigation buttons
+  prevButton.addEventListener('click', () => moveToSlide(currentIndex - 1));
+  nextButton.addEventListener('click', () => moveToSlide(currentIndex + 1));
 
-      window.addEventListener('resize', updateSliderPosition);
-      updateSliderPosition();
-    })();
+  // Update slider position on window resize to ensure proper alignment
+  window.addEventListener('resize', updateSliderPosition);
+
+  // Initialize the slider position
+  updateSliderPosition();
+})();
+
   </script>
 </div>
 <!--Factory Slider End-->

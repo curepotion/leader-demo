@@ -1,0 +1,222 @@
+.container{
+  max-width:880px !important;
+}
+
+
+/****FLOAT ICON***/
+    /* Floating Button Styles */
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border: none;
+      background: #28a745; /* Green background for phone */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      border-radius: 50%;
+      animation: smooth-bounce 1.5s infinite ease-in-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Icon Styling */
+    .floating-button i {
+      font-size: 24px; /* Font Awesome icon size */
+    }
+
+    /* Bounce Animation */
+    @keyframes smooth-bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px); /* Adjust height of the bounce */
+      }
+    }
+
+    /* Hover Effect */
+    .floating-button:hover {
+      transform: scale(1.1); /* Slightly enlarge on hover */
+      animation: none; /* Stop bouncing on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+/****FLOAT ICON***/
+
+/****navbar**/
+
+
+
+/***navbar***/
+
+.section-title {
+  color: #e7bd1f;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+
+
+}
+
+.section-description {
+  color: #403e3e;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+
+}
+
+.section-highlight {
+  color: #000000;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
+}
+
+.section-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+
+.hero-section {
+  min-height: calc(100vh - 133px); /* Subtract navbar height from viewport height */
+  display: flex;
+  color: #fff; /* White text for contrast */
+  background-image: url('../images/hero-image.jpeg'); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  margin-top: 133px; /* Height of navbar */
+  height: calc(100vh - 133px); /* Explicitly set height to remaining space */
+}
+.hero-title {
+
+  font-weight: bold;
+  font-size:90px;
+  text-align: left;
+  margin-top:40px;
+}
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+}
+
+
+/* section divider */
+  /* General Reset for Box Sizing */
+  .section-divider,
+  .section-divider * {
+    box-sizing: border-box;
+  }
+
+  /* Section Divider Container */
+  .section-divider {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    position: relative;
+    padding: 16px; /* Padding for spacing */
+    width: 100%; /* Responsive width */
+    max-width: 100%; /* Avoid overflowing */
+  }
+
+  /* Left Image */
+  .section-divider-left-img {
+    flex-shrink: 0;
+    width: 10vw; /* Scales with viewport */
+    max-width: 84px; /* Fallback for small screens */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+  /* Text Section */
+  .section-divider-text {
+    color: #363960;
+    text-align: center; /* Center the text */
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 24PX; /* Scale font size with screen width */
+    font-weight: 600;
+    position: relative;
+    max-width: 200px;
+    width: auto; /* Let the text resize naturally */
+  }
+
+  /* Horizontal Line */
+  .section-divider-line {
+    border-style: solid;
+    border-color: #d9d9d9;
+    border-width: 0.5px 0 0 0;
+    flex: 1;
+    height: 0px;
+    position: relative;
+  }
+
+  /* Right Image */
+  .section-divider-right-img {
+    flex-shrink: 0;
+    width: 8vw; /* Scales with viewport */
+    max-width: 66px; /* Fallback for small screens */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+
+
+
+  
+
+
+
+
+
+
+
+/* certificate */
+.certificate-img{
+  max-width:200px;
+}
+
+/**footer**/
+
+
+/* Footer styles */
+.footer {
+  position: relative;
+  background-color: #e1be5e; /* Matching the yellow color */
+  height: 500px; /* Height of the footer */
+  clip-path: polygon(100% 100%, 0% 100% , 0.00% 12.79%, 1.00% 12.66%, 2.00% 12.55%, 3.00% 12.45%, 4.00% 12.38%, 5.00% 12.32%, 6.00% 12.28%, 7.00% 12.25%, 8.00% 12.25%, 9.00% 12.27%, 10.00% 12.30%, 11.00% 12.35%, 12.00% 12.42%, 13.00% 12.50%, 14.00% 12.61%, 15.00% 12.73%, 16.00% 12.87%, 17.00% 13.02%, 18.00% 13.20%, 19.00% 13.38%, 20.00% 13.58%, 21.00% 13.80%, 22.00% 14.03%, 23.00% 14.27%, 24.00% 14.52%, 25.00% 14.78%, 26.00% 15.06%, 27.00% 15.34%, 28.00% 15.64%, 29.00% 15.94%, 30.00% 16.24%, 31.00% 16.55%, 32.00% 16.87%, 33.00% 17.19%, 34.00% 17.51%, 35.00% 17.84%, 36.00% 18.16%, 37.00% 18.49%, 38.00% 18.81%, 39.00% 19.13%, 40.00% 19.45%, 41.00% 19.76%, 42.00% 20.07%, 43.00% 20.37%, 44.00% 20.66%, 45.00% 20.94%, 46.00% 21.22%, 47.00% 21.48%, 48.00% 21.74%, 49.00% 21.98%, 50.00% 22.21%, 51.00% 22.42%, 52.00% 22.62%, 53.00% 22.81%, 54.00% 22.98%, 55.00% 23.13%, 56.00% 23.27%, 57.00% 23.39%, 58.00% 23.50%, 59.00% 23.58%, 60.00% 23.65%, 61.00% 23.70%, 62.00% 23.74%, 63.00% 23.75%, 64.00% 23.75%, 65.00% 23.72%, 66.00% 23.68%, 67.00% 23.62%, 68.00% 23.55%, 69.00% 23.45%, 70.00% 23.34%, 71.00% 23.21%, 72.00% 23.06%, 73.00% 22.90%, 74.00% 22.72%, 75.00% 22.53%, 76.00% 22.32%, 77.00% 22.10%, 78.00% 21.87%, 79.00% 21.62%, 80.00% 21.36%, 81.00% 21.09%, 82.00% 20.82%, 83.00% 20.53%, 84.00% 20.23%, 85.00% 19.93%, 86.00% 19.62%, 87.00% 19.31%, 88.00% 18.99%, 89.00% 18.66%, 90.00% 18.34%, 91.00% 18.02%, 92.00% 17.69%, 93.00% 17.37%, 94.00% 17.05%, 95.00% 16.73%, 96.00% 16.41%, 97.00% 16.10%, 98.00% 15.80%, 99.00% 15.50%, 100.00% 15.21%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

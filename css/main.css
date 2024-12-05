@@ -55,10 +55,7 @@
 /***navbar***/
 
 .section-title {
-  color: #e7bd1f;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 50px;
-  font-weight: 700;
+
 
 
 }
@@ -79,7 +76,7 @@
 }
 
 .section-image {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
   object-fit: cover;
 }
@@ -93,7 +90,7 @@
   min-height: calc(100vh - 133px); /* Subtract navbar height from viewport height */
   display: flex;
   color: #fff; /* White text for contrast */
-  background-image: url('../images/hero-image.jpeg'); /* Replace with your image URL */
+  background-image: url('../img/hero-image.jpeg'); /* Replace with your image URL */
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */

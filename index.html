@@ -195,15 +195,15 @@
               <a class="nav-link" href="#contact">聯絡立德</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="./img/icons/icon-language.png" alt="Language" width="24" height="24">
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+              <a class="nav-link" href="#" id="languageDropdown" role="button" aria-expanded="false">
+                <img src="./img/icons/icon-language.png" alt="Settings" width="24" height="24">
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
                 <li><a class="dropdown-item" href="./index.html">繁體中文</a></li>
                 <li><a class="dropdown-item" href="./index_jp.html">日本語</a></li>
                 <li><a class="dropdown-item" href="./index_en.html">English</a></li>
-              </ul>
-            </li>
+                          </ul>
+                        </li>
           </ul>
         </div>
   
@@ -325,7 +325,7 @@
       <div class="row">
         <!-- Image Section -->
         <div class="d-flex justify-content-center">
-          <img class="section-image" src="./images/leader-sign.png" alt="Section Image">
+          <img class="section-image" src="./img/leader-sign.png" alt="Section Image">
         </div>
 </div>
 
@@ -797,6 +797,7 @@
       display: flex;
       transition: transform 0.9s ease;
       padding-top: 40px;
+      gap:10px;
     }
 
     .factor-slider-slide {
@@ -962,8 +963,8 @@
         <img src="./img/factory/烤箱-s.webp" alt="專業級大烤箱">
         <p>專業級大烤箱</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/X-Ray包裝檢測儀.webp" data-description="X-Ray 包裝檢測儀">
-        <img src="./img/factory/X-Ray包裝檢測儀-s.webp" alt="X-Ray包裝檢測儀">
+      <div class="factor-slider-slide" data-image="./img/factory/x-ray.webp" data-description="X-Ray 包裝檢測儀">
+        <img src="./img/factory/x-ray-s.webp" alt="X-Ray包裝檢測儀">
         <p>X-Ray 包裝檢測儀</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/Air shower空氣浴塵室.webp" data-description="Air shower 空氣浴塵室">
@@ -1175,7 +1176,7 @@
     .footer {
       display: flex;
       align-items: flex-end;
-      justify-content: center;
+      justify-content: end;
       min-height: 100px;
       padding-bottom: 20px;
     }
@@ -1227,10 +1228,31 @@
   <img class="footer-image" src="./img/footer-img.png" alt="Footer decoration">
 </div>
 
-<!-- Footer -->
-<footer class="footer">
+
+<footer class="footer d-flex flex-column align-items-center pb-5">
+  <div class="container align-self-end">
+    <style>
+      .line-span {
+        display: block; /* Allows it to behave like a block-level element */
+        height: 2px; /* Adjust thickness of the line */
+        background-color: #000; /* Line color (black in this case) */
+        width: 100%; /* Full-width line */
+        margin: 20px 0; /* Optional: Add spacing above and below the line */
+      }
+    
+    </style>
+<span class="line-span"></span>
   <p class="copyright">Copyright 2024© Leader Innovations Petfood CORP. All Rights Reserved</p>
+</div>
+    
 </footer>
+
+
+<!-- Footer -->
+ 
+
+
+
 
 
 

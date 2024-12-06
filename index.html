@@ -342,7 +342,7 @@ text-align: left;
       </div>
       <div class="row">
         <!-- Image Section -->
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center pt-4">
           <img class="section-image" src="./img/leader-sign.png" alt="Section Image">
         </div>
 </div>
@@ -400,10 +400,10 @@ text-align: left;
 
     <!-- Paragraphs -->
     <div class="paragraphs">
-      <div class="paragraph active">我們追求卓越的品質，確保產品和服務的高水準，<br>以滿足客戶的需求和期望。</div>
-      <div class="paragraph">我們注重效率和迅速響應客戶的要求，<br>以提供快速、準時的交付和服務。</div>
-      <div class="paragraph">我們致力於持續創新，不斷尋求新的思維和解決方案，<br>以不斷提升產品和服務的競爭力。</div>
-      <div class="paragraph">我們具備靈活性，能夠因應市場變化快速調整策略和方向，<br>以滿足客戶多樣化的需求和期望。</div>
+      <div class="paragraph active">我們追求卓越的品質，確保產品和服務的高水準，以滿足客戶的需求和期望。</div>
+      <div class="paragraph">我們注重效率和迅速響應客戶的要求，以提供快速、準時的交付和服務。</div>
+      <div class="paragraph">我們致力於持續創新，不斷尋求新的思維和解決方案，以不斷提升產品和服務的競爭力。</div>
+      <div class="paragraph">我們具備靈活性，能夠因應市場變化快速調整策略和方向，以滿足客戶多樣化的需求和期望。</div>
     </div>
   </div>
 
@@ -695,7 +695,7 @@ text-align: left;
       .marquee {
         display: flex;
         gap: 20px;
-        animation: marquee-scroll 10s linear infinite;
+        animation: marquee-scroll 30s linear infinite;
         width: fit-content; /* Let content determine width */
       }
   
@@ -819,7 +819,7 @@ text-align: left;
         <img src="./img/factory/Air shower空氣浴塵室-s.webp" alt="Air shower空氣浴塵室">
         <p>Air shower 空氣浴塵室</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/VEMAG連續式真空充機.webp" data-description="VEMAG 連續式真空充填機">
+      <div class="factor-slider-slide" data-image="./img/factory/VEMAG連續式真空填機.webp" data-description="VEMAG 連續式真空充填機">
         <img src="./img/factory/VEMAG連續式真空填機-s.webp" alt="VEMAG連續式真空充填機">
         <p>VEMAG 連續式真空充填機</p>
       </div>
@@ -866,12 +866,10 @@ text-align: left;
       <button class="factor-slider-next"></button>
     </div>
   </div>
-</div>
-
   <!-- Lightbox Modal -->
   <div style="z-index: 100000;" class="lightbox-modal">
     <div class="lightbox-content">
-      <button class="lightbox-close">&times;</button>
+      <button class="lightbox-close" style="display: flex; justify-content: center; align-items: center;">&times;</button>
       <img src="" alt="Lightbox Image">
       <p></p>
     </div>
@@ -1038,8 +1036,8 @@ text-align: left;
 
     .lightbox-close {
       position: absolute;
-      top: -20px;
-      right: -20px;
+      top: 0;
+      right: 0;
       background-color: #b89517;
       color: #333;
       border: none;
@@ -1051,6 +1049,7 @@ text-align: left;
       line-height: 40px;
       text-align: center;
       z-index: 1000;
+      transform: translate(50%, -50%);
     }
 
     @media (max-width: 768px) {
@@ -1059,15 +1058,13 @@ text-align: left;
       }
       
       .lightbox-close {
-        top: -20px;
-        right: -10px;
+        transform: translate(50%, -50%);
       }
     }
 
     @media (max-width: 480px) {
       .lightbox-close {
-        top: -20px;
-        right: -5px;
+        transform: translate(50%, -50%);
       }
     }
   </style>
@@ -1084,6 +1081,9 @@ text-align: left;
   const modalClose = modal.querySelector('.lightbox-close');
 
   let currentIndex = 0;
+
+  let startPosition = 0; // to track the initial touch/mouse position
+  let isDragging = false; // to track whether the user is dragging
 
   function updateSliderPosition() {
     const slideWidth = slides[0].getBoundingClientRect().width;
@@ -1141,6 +1141,55 @@ text-align: left;
   // Update slider position on window resize to ensure proper alignment
   window.addEventListener('resize', updateSliderPosition);
 
+  // Touch and Mouse Events for Swipe Functionality
+  function handleSwipeStart(event) {
+    isDragging = true;
+    startPosition = event.touches ? event.touches[0].clientX : event.clientX; // Get start position
+    event.preventDefault(); // Prevent scrolling on mobile
+  }
+
+  function handleSwipeMove(event) {
+    if (!isDragging) return;
+
+    const movePosition = event.touches ? event.touches[0].clientX : event.clientX; // Get current position
+    const moveDistance = startPosition - movePosition; // Calculate swipe distance
+
+    // Calculate new slider position based on swipe
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const translateX = -currentIndex * slideWidth + moveDistance;
+    track.style.transform = `translateX(${translateX}px)`;
+  }
+
+  function handleSwipeEnd(event) {
+    if (!isDragging) return;
+
+    isDragging = false;
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const moveDistance = startPosition - (event.touches ? event.touches[0].clientX : event.clientX);
+
+    if (Math.abs(moveDistance) > slideWidth / 4) {
+      // If swipe distance is greater than a quarter of a slide width, move to next or previous slide
+      if (moveDistance > 0) {
+        moveToSlide(currentIndex + 1); // Swipe right to left -> Next slide
+      } else {
+        moveToSlide(currentIndex - 1); // Swipe left to right -> Previous slide
+      }
+    } else {
+      updateSliderPosition(); // No swipe large enough, reset position
+    }
+  }
+
+  // Add touch event listeners for swipe functionality
+  slider.addEventListener('touchstart', handleSwipeStart, { passive: false });
+  slider.addEventListener('touchmove', handleSwipeMove, { passive: false });
+  slider.addEventListener('touchend', handleSwipeEnd);
+
+  // Add mouse event listeners for swipe functionality
+  slider.addEventListener('mousedown', handleSwipeStart);
+  slider.addEventListener('mousemove', handleSwipeMove);
+  slider.addEventListener('mouseup', handleSwipeEnd);
+  slider.addEventListener('mouseleave', handleSwipeEnd); // Handle mouse leaving the slider area
+
   // Initialize the slider position
   updateSliderPosition();
 })();
@@ -1168,13 +1217,12 @@ text-align: left;
       margin-bottom: 10px;
     }
     .info-item .icon {
-      font-weight: bold;
+      font-weight: 400;
       margin-right: 1px;
     }
     .info-box{
       padding-bottom:80px;
       font-size:24px;
-      font-weight: 600;
     }
 
     @media (min-width: 768px) {
@@ -1190,19 +1238,19 @@ text-align: left;
     <div class="info-item">
       <span class="icon">丨</span>
       <div>
-        <strong class="strong">工廠地址：</strong>239新北市鶯歌區中正三路156巷8-12號
+        <strong class="strong">工廠地址：</strong><span>239新北市鶯歌區中正三路156巷8-12號</span>
       </div>
     </div>
     <div class="info-item">
       <span class="icon">丨</span>
       <div>
-        <strong class="strong">營業時間：</strong>周一~周五 08:00~17:30
+        <strong class="strong">營業時間：</strong><span>周一~周五 08:00~17:30</span>
       </div>
     </div>
     <div class="info-item">
       <span class="icon">丨</span>
       <div>
-        <strong class="strong">服務電話：</strong>0226791868
+        <strong class="strong">服務電話：</strong><span>0226791868</span>
       </div>
     </div>
   </div>
@@ -1212,7 +1260,7 @@ text-align: left;
 
     <iframe 
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.7376523637936!2d121.3308321108408!3d24.941005677784567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681947b81f49df%3A0x3595cd14e287f500!2zMjM55paw5YyX5biC6bav5q2M5Y2A5Lit5q2j5LiJ6LevMTU25be3OC0xMuiZnw!5e0!3m2!1szh-TW!2stw!4v1733454871771!5m2!1szh-TW!2stw" 
-  style="width: 100%; height: 80vh; border: 0;" 
+      style="width: 100%; height: 80vh; border: 0;" 
   allowfullscreen="" 
   loading="lazy" 
   referrerpolicy="no-referrer-when-downgrade">
@@ -1449,7 +1497,29 @@ text-align: left;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();  // Prevent default anchor behavior
   
+        // Get the target section
+        const targetId = this.getAttribute('href').substring(1);  // Get the ID from href, excluding the "#"
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          // Get the position of the target element and the height of the viewport
+          const offsetTop = targetElement.offsetTop;
+          const viewportHeight = window.innerHeight;
+  
+          // Scroll to the section, adjusting so it's vertically centered
+          window.scrollTo({
+            top: offsetTop - (viewportHeight / 2) + (targetElement.offsetHeight / 2),
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
   
   
 </body>

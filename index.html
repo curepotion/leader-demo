@@ -1090,7 +1090,7 @@ text-align: left;
     const containerWidth = slider.offsetWidth;
 
     // Calculate offset for centering
-    const centerOffset = (containerWidth - slideWidth) / 1.7;
+    const centerOffset = (containerWidth - slideWidth) / 1.5;
 
     // Handle scaling effect for the active slide
     const activeSlide = slides[currentIndex];
@@ -1145,14 +1145,14 @@ text-align: left;
   function handleSwipeStart(event) {
     isDragging = true;
     startPosition = event.touches ? event.touches[0].clientX : event.clientX; // Get start position
-    event.preventDefault(); // Prevent scrolling on mobile
+  
   }
 
   function handleSwipeMove(event) {
     if (!isDragging) return;
 
     const movePosition = event.touches ? event.touches[0].clientX : event.clientX; // Get current position
-    const moveDistance = startPosition - movePosition; // Calculate swipe distance
+    const moveDistance = movePosition - startPosition; // Calculate swipe distance (reversed direction)
 
     // Calculate new slider position based on swipe
     const slideWidth = slides[0].getBoundingClientRect().width;
@@ -1164,15 +1164,17 @@ text-align: left;
     if (!isDragging) return;
 
     isDragging = false;
+    const endPosition = event.changedTouches ? event.changedTouches[0].clientX : event.clientX;
+    const moveDistance = endPosition - startPosition; // Reversed direction
+
     const slideWidth = slides[0].getBoundingClientRect().width;
-    const moveDistance = startPosition - (event.touches ? event.touches[0].clientX : event.clientX);
 
     if (Math.abs(moveDistance) > slideWidth / 4) {
       // If swipe distance is greater than a quarter of a slide width, move to next or previous slide
       if (moveDistance > 0) {
-        moveToSlide(currentIndex + 1); // Swipe right to left -> Next slide
+        moveToSlide(currentIndex - 1); // Swipe right -> Previous slide
       } else {
-        moveToSlide(currentIndex - 1); // Swipe left to right -> Previous slide
+        moveToSlide(currentIndex + 1); // Swipe left -> Next slide
       }
     } else {
       updateSliderPosition(); // No swipe large enough, reset position
@@ -1180,8 +1182,8 @@ text-align: left;
   }
 
   // Add touch event listeners for swipe functionality
-  slider.addEventListener('touchstart', handleSwipeStart, );
-  slider.addEventListener('touchmove', handleSwipeMove, );
+  slider.addEventListener('touchstart', handleSwipeStart, { passive: false });
+  slider.addEventListener('touchmove', handleSwipeMove, { passive: false });
   slider.addEventListener('touchend', handleSwipeEnd);
 
   // Add mouse event listeners for swipe functionality
@@ -1193,7 +1195,6 @@ text-align: left;
   // Initialize the slider position
   updateSliderPosition();
 })();
-
   </script>
 </div>
 <!--Factory Slider End-->

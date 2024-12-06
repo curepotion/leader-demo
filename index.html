@@ -192,7 +192,7 @@
               <a class="nav-link" href="#factory">工廠設備</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">聯絡立德</a>
+              <a class="nav-link" href="#contact">聯絡利得</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link" href="#" id="languageDropdown" role="button" aria-expanded="false">
@@ -217,7 +217,7 @@
             <a class="nav-link" href="#core">核心理念</a>
             <a class="nav-link" href="#process">作業流程</a>
             <a class="nav-link" href="#factory">工廠設備</a>
-            <a class="nav-link" href="#contact">聯絡立德</a>
+            <a class="nav-link" href="#contact">聯絡利得</a>
             <a class="nav-link" href="./index.html">繁體中文</a>
             <a class="nav-link" href="./index_jp.html">日本語</a>
             <a class="nav-link" href="./index_en.html">English</a>
@@ -254,11 +254,24 @@
       <h1 class="hero-title">利得創新，<br>始終用心。</h1>
 <style>
   .hero-title {
-
 font-weight: bold;
-font-size:90px;
 text-align: left;
-margin-top:40px;
+  margin-top: 100%;
+  font-size: 60px; /* Default for mobile */
+}
+
+@media (min-width: 768px) { /* Tablet */
+  .hero-title {
+    font-size: 90px;
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 992px) { /* Desktop */
+  .hero-title {
+    font-size: 90px; 
+    margin-top: 10%;
+  }
 }
 </style>
     </div>
@@ -279,7 +292,7 @@ margin-top:40px;
 .section-title{
   color: #e7bd1f;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
 }
 
@@ -289,8 +302,8 @@ margin-top:40px;
     display: block;
     color: #e7bd1f;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 50px;
   font-weight: 700;
+  font-size: 50px;
   }
 }
 
@@ -299,7 +312,7 @@ margin-top:40px;
   display: block;
   color: #e7bd1f;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 50px;
+  font-size: 34px;
   font-weight: 700;
 }
 
@@ -307,19 +320,16 @@ margin-top:40px;
   /* Hide section-title-mobile on screens larger than 992px (desktop) */
   .section-title-mobile {
     display: none;
-    color: #e7bd1f;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 50px;
-  font-weight: 700;
+
   }
 }
     </style>
     <div class="container" id="history">
       <div class="row">
         <div class="d-flex justify-content-center">
-          <div class="col-8 d-flex flex-column">
-          <h1 class="section-title-desktop mb-3">以愛為本，科技為力。</h1>
-          <h1 class="section-title-mobile mb-3">以愛為本，<br>科技為力。</h1>
+          <div class="col-md-8 col-xs-12 col-xl-8 d-flex flex-column">
+          <h1 class="section-title-desktop mb-3">以愛為本，<span style="color:#000000;">科技為力。</span></h1>
+          <h1 class="section-title-mobile mb-3">以愛為本，<span style="color:#000000;">科技為力。</span></h1>
           <p class="section-description">
             利得創新由一群熱愛寵物且經驗豐富的團隊，於2023年共同創立。致力於研發最先進的自動化生產技術，為寵物提供最健康的飲食。從原料、製程，到包裝和出貨...
             每個步驟都經過團隊的嚴格監控，
@@ -342,7 +352,7 @@ margin-top:40px;
 
 
   <!--核心理念-->
-<section style="background-color: #eeeeee; padding: 20px 0;">
+<section style="background-color: #f7f6f5; padding: 100px 0;">
 
 <!-- Divider 1 核心理念-->
   <div class="container" id="core">
@@ -443,14 +453,14 @@ margin-top:40px;
     .value-img {
       max-width: 400px;
       max-height:400px;
-      height:400px;
-      width:400px;
+
     }
 
     .slider {
       display: flex;
       width: 100%;
       transition: transform 0.5s ease-in-out;
+      margin-bottom:50px;
     }
 
     .slider-container{
@@ -790,7 +800,7 @@ margin-top:40px;
 
 
 <!--Factory Slider-->
-<div class="container">
+<div class="container-fluid">
 
 
 
@@ -884,16 +894,39 @@ margin-top:40px;
 
     .factor-slider-slide {
       box-sizing: border-box;
-      padding: 12px;
       text-align: center;
-      cursor: pointer; /* Indicate click for lightbox */
+      cursor: pointer;
+      min-width: 280px;
+      padding-left: 12px;
+      padding-right: 12px;
     }
 
     .factor-slider-slide img {
       width: 100%;
-      min-width: 200px;
+      box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+   
       border-radius: 10px;
       margin-bottom: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .factor-slider-slide {
+        min-width: 400px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+    }
+
+    @media (min-width: 992px) {
+      .factor-slider-slide {
+        min-width: 480px;
+       
+        padding-left: 20px;
+        padding-right: 20px;
+        
+      }
+  
     }
 
     .factor-slider-slide p {
@@ -905,7 +938,8 @@ margin-top:40px;
 
     .factor-slider-slide.active img {
       transform: scale(1.1);
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.8s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     }
 
     /* Custom Arrow Styles */
@@ -1056,7 +1090,7 @@ margin-top:40px;
     const containerWidth = slider.offsetWidth;
 
     // Calculate offset for centering
-    const centerOffset = (containerWidth - slideWidth) / 1.8;
+    const centerOffset = (containerWidth - slideWidth) / 1.7;
 
     // Handle scaling effect for the active slide
     const activeSlide = slides[currentIndex];
@@ -1115,16 +1149,16 @@ margin-top:40px;
 </div>
 <!--Factory Slider End-->
 
-<!-- Divider 聯絡立德 -->
+<!-- Divider 聯絡利得 -->
 <div class="container" id="contact">
   <div class="section-divider">
     <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
-    <div class="section-divider-text">聯絡立德</div>
+    <div class="section-divider-text">聯絡利得</div>
     <div class="section-divider-line"></div>
     <img class="section-divider-right-img" src="./img/icons/start-grey.png" alt="Right Image" />
   </div>
 </div>
-<!-- Divider 聯絡立德  End-->
+<!-- Divider 聯絡利得 End-->
 
 <div class="container mt-4">
   <style>
@@ -1138,16 +1172,21 @@ margin-top:40px;
       margin-right: 1px;
     }
     .info-box{
-      padding-left:50px;
       padding-bottom:80px;
       font-size:24px;
       font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .info-box {
+        padding-left: 50px;
+      }
     }
     .strong{
       font-weight:900;
     }
   </style>
-  <div class="info-box">
+  <div class="info-box col-xl-12 col-md-12 col-xs-12">
     <div class="info-item">
       <span class="icon">丨</span>
       <div>
@@ -1172,8 +1211,8 @@ margin-top:40px;
     <!--地址-->
 
     <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.737509531727!2d121.3308321110904!3d24.941010541937043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681947b81f49df%3A0x3595cd14e287f500!2sNo.%208-12%E8%99%9F%2C%20Lane%20156%2C%20Zhongzhengsan%20Rd%2C%20Yingge%20District%2C%20New%20Taipei%20City%2C%20239!5e0!3m2!1sen!2stw!4v1732082622559!5m2!1sen!2stw" 
-  style="width: 100%; height: 60vh; border: 0;" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.7376523637936!2d121.3308321108408!3d24.941005677784567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681947b81f49df%3A0x3595cd14e287f500!2zMjM55paw5YyX5biC6bav5q2M5Y2A5Lit5q2j5LiJ6LevMTU25be3OC0xMuiZnw!5e0!3m2!1szh-TW!2stw!4v1733454871771!5m2!1szh-TW!2stw" 
+  style="width: 100%; height: 80vh; border: 0;" 
   allowfullscreen="" 
   loading="lazy" 
   referrerpolicy="no-referrer-when-downgrade">
@@ -1264,7 +1303,7 @@ margin-top:40px;
     <style>
       .line-span {
         display: block; /* Allows it to behave like a block-level element */
-        height: 2px; /* Adjust thickness of the line */
+        height: 1px; /* Adjust thickness of the line */
         background-color: #000; /* Line color (black in this case) */
         width: 100%; /* Full-width line */
         margin: 20px 0; /* Optional: Add spacing above and below the line */

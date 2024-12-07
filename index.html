@@ -506,8 +506,8 @@ text-align: left;
   <style>
     /* Slides Wrapper */
     .value-img {
-      max-width: 400px;
-      max-height:400px;
+      max-width: 450px;
+      max-height:450px;
 
     }
 
@@ -533,9 +533,12 @@ text-align: left;
       overflow: hidden;
     }
 
+/* Updated for responsive images and full visibility */
     .slide img {
-      max-width: 450px;
-      display: block;
+    width: 100%; /* Ensure the image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure block-level display for proper alignment */
+    max-width: 450px; /* Remove max-width restriction to show all */
     }
 
     /* Tab Navigation */

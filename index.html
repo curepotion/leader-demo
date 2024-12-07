@@ -31,6 +31,11 @@
 <div>
 <style>
       /* Nav-link Styling for Desktop */
+      .nav-link{
+        font-size: 21px;
+        
+      }
+
       .navbar-nav .nav-link {
         position: relative;
         text-decoration: none;
@@ -80,7 +85,7 @@
         position: fixed;
         width: 100%;
         z-index: 1050;
-        height:140px;
+        height:180px;
     
       }
   
@@ -101,7 +106,7 @@
          
 
       .shrinkable-navbar .navbar-brand img {
-        max-height: 90px;
+        max-height: 113px;
         transition: all 0.4s ease-in-out;
       }
   
@@ -167,10 +172,38 @@
         background-color: #b89517;
       }
 
+      .menu-nav{
+        padding-right:164px;
+        padding-left:164px;
+      }
+
+      .navbar-nav {
+        gap:24px;
+      }
+
+
+
+@media (max-width: 1355px) {
+  
+  .menu-nav{
+        padding-right:16px;
+        padding-left:16px;
+      }
+
+      .navbar-nav {
+        gap:4px;
+      }
+
+}
+
+
+
+
+
     </style>
   
     <nav class="navbar navbar-expand-lg fixed-top navbar-light shrinkable-navbar" id="mainNavbar">
-      <div class="container">
+      <div class="container-fluid menu-nav">
         <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -196,7 +229,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link" href="#" id="languageDropdown" role="button" aria-expanded="false">
-                <img src="./img/icons/icon-language.png" alt="Settings" width="24" height="24">
+                <img src="./img/icons/icon-language.png" alt="Settings" width="35" height="35">
                           </a>
                           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
                 <li><a class="dropdown-item" href="./index.html">繁體中文</a></li>
@@ -282,8 +315,8 @@ text-align: left;
   <section class="section-1">
     <style>
       .section-1{
-        padding-top:5%;
-        padding-bottom:5%;
+        padding-top:50px;
+        padding-bottom:60px;
       }
 
   
@@ -314,7 +347,7 @@ text-align: left;
   display: block;
   color: #e7bd1f;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 34px;
+  font-size: 44px;
   font-weight: 700;
 }
 
@@ -329,7 +362,7 @@ text-align: left;
     <div class="container" id="history">
       <div class="row">
         <div class="d-flex justify-content-center">
-          <div class="col-md-8 col-xs-12 col-xl-8 d-flex flex-column">
+          <div class="col-xs-12  col-sm-12 col-md-12 col-xl-12 d-flex flex-column">
           <h1 class="section-title-desktop mb-3">以愛為本，<span style="color:#000000;">科技為力。</span></h1>
           <h1 class="section-title-mobile mb-3">以愛為本，<span style="color:#000000;">科技為力。</span></h1>
           <p class="section-description">
@@ -345,7 +378,7 @@ text-align: left;
       <div class="row">
         <!-- Image Section -->
         <div class="d-flex justify-content-center pt-4">
-          <img class="section-image" src="./img/leader-sign.png" alt="Section Image">
+          <img class="section-image mb-4" src="./img/leader-sign.png" alt="Section Image">
         </div>
 </div>
 
@@ -554,7 +587,7 @@ text-align: left;
       position: absolute;
       width: 100%;
       text-align: center;
-      font-size: 21px;
+      font-size: 24px;
       font-weight:400;
       color:#000;
       opacity: 0;
@@ -809,11 +842,11 @@ text-align: left;
 
   <div class="factor-slider">
     <div class="factor-slider-track">
-      <div class="factor-slider-slide active" data-image="./img/factory/烤箱.webp" data-description="專業級大烤箱">
+      <div class="factor-slider-slide" data-image="./img/factory/烤箱.webp" data-description="專業級大烤箱">
         <img src="./img/factory/烤箱-s.webp" alt="專業級大烤箱">
         <p>專業級大烤箱</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/x-ray.webp" data-description="X-Ray 包裝檢測儀">
+      <div class="factor-slider-slide active" data-image="./img/factory/x-ray.webp" data-description="X-Ray 包裝檢測儀">
         <img src="./img/factory/x-ray-s.webp" alt="X-Ray包裝檢測儀">
         <p>X-Ray 包裝檢測儀</p>
       </div>

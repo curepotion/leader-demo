@@ -65,6 +65,10 @@
       .nav-link:hover{
         color:#b89517;
       }
+
+      .nav-link{
+        color:#363960;
+      }
   
       /* Exclude underline for dropdown icon */
       .navbar-nav .nav-item.dropdown .nav-link::after {
@@ -91,7 +95,7 @@
   
     .shrinkable-navbar.shrunk {
         padding: 0.4rem 0;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         
@@ -257,7 +261,7 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <a class="nav-link" href="#history">公司歷程</a>
+            <a class="nav-link"  href="#history">公司歷程</a>
             <a class="nav-link" href="#core">核心理念</a>
             <a class="nav-link" href="#process">作業流程</a>
             <a class="nav-link" href="#factory">工廠設備</a>
@@ -367,7 +371,7 @@ text-align: left;
   display: block;
   color: #e7bd1f;
   font-family: "Inter-Bold", sans-serif;
-  font-size: 44px;
+  font-size: clamp(36px, 2vw, 40px);
   font-weight: 700;
 }
 
@@ -454,7 +458,7 @@ text-align: left;
   </div>
 
     <!-- Paragraphs -->
-    <div class="paragraphs col-xl-11 col-md-11 col-xs-12 col-sm-12 mx-auto text-center">
+    <div class="paragraphs col-xl-10 col-md-10 col-xs-12 col-sm-12 mx-auto text-center">
       <div class="paragraph active">我們追求卓越的品質，確保產品和服務的高水準，以滿足客戶的需求和期望。</div>
       <div class="paragraph">我們注重效率和迅速響應客戶的要求，以提供快速、準時的交付和服務。</div>
       <div class="paragraph">我們致力於持續創新，不斷尋求新的思維和解決方案，以不斷提升產品和服務的競爭力。</div>
@@ -831,10 +835,16 @@ text-align: left;
   }
 
   .certificate span{
-   font-size:24px;
+   font-size:16px;
    color:#b89517;
    font-weight:500;
   }
+
+@media (min-width: 992px) {
+  .certificate span {
+    font-size:24px;
+  }
+}
 
  </style>
 
@@ -1138,7 +1148,7 @@ text-align: left;
   const modalDescription = modal.querySelector('p');
   const modalClose = modal.querySelector('.lightbox-close');
 
-  let currentIndex = 0;
+  let currentIndex = 1;
 
   let startPosition = 0; // to track the initial touch/mouse position
   let isDragging = false; // to track whether the user is dragging
@@ -1148,7 +1158,15 @@ text-align: left;
     const containerWidth = slider.offsetWidth;
 
     // Calculate offset for centering
-    const centerOffset = (containerWidth - slideWidth) / 1.8;
+    // Calculate different offsets for different screen sizes
+    let centerOffset;
+    if (window.innerWidth < 430) { // Mobile
+      centerOffset = (containerWidth - slideWidth) / 1.4;
+    } else if (window.innerWidth < 992) { // Tablet 
+      centerOffset = (containerWidth - slideWidth) / 1.8;
+    } else { // Desktop
+      centerOffset = (containerWidth - slideWidth) / 2.1 + (containerWidth - slideWidth) * 0.05;
+    }
 
     // Handle scaling effect for the active slide
     const activeSlide = slides[currentIndex];
@@ -1201,15 +1219,15 @@ text-align: left;
 
   // Touch and Mouse Events for Swipe Functionality
   function handleSwipeStart(event) {
+    if (!event.touches) return; // Only handle touch events
     isDragging = true;
-    startPosition = event.touches ? event.touches[0].clientX : event.clientX; // Get start position
-  
+    startPosition = event.touches[0].clientX; // Get start position
   }
 
   function handleSwipeMove(event) {
-    if (!isDragging) return;
+    if (!isDragging || !event.touches) return;
 
-    const movePosition = event.touches ? event.touches[0].clientX : event.clientX; // Get current position
+    const movePosition = event.touches[0].clientX; // Get current position
     const moveDistance = movePosition - startPosition; // Calculate swipe distance (reversed direction)
 
     // Calculate new slider position based on swipe
@@ -1527,7 +1545,7 @@ text-align: left;
     // Show/hide scroll to top button
     window.addEventListener('scroll', function() {
       const scrollButton = document.querySelector('.scroll-to-top');
-      if (window.pageYOffset > 300) { // Show button after 300px scroll
+      if (window.pageYOffset > 3400) { // Show button after 300px scroll
         scrollButton.classList.add('visible');
       } else {
         scrollButton.classList.remove('visible');
@@ -1568,18 +1586,26 @@ text-align: left;
         const targetId = this.getAttribute('href').substring(1);  // Get the ID from href, excluding the "#"
         const targetElement = document.getElementById(targetId);
         
+        // Close offcanvas if it exists
+        const offcanvas = document.querySelector('.offcanvas');
+        if (offcanvas) {
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+          if (bsOffcanvas) {
+            bsOffcanvas.hide();
+          }
+        }
+        
         if (targetElement) {
           // Get the position of the target element and the height of the viewport
           const offsetTop = targetElement.offsetTop;
           const viewportHeight = window.innerHeight;
-  
         // Create easing function
         const easeInOutQuad = (t) => {
           return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; // Faster cubic easing
         };
         // Get start position and calculate distance
         const startPosition = window.pageYOffset;
-        const targetPosition = offsetTop - (viewportHeight / 2) + (targetElement.offsetHeight / 2);
+        const targetPosition = offsetTop - (viewportHeight / 3) + (targetElement.offsetHeight / 2);
         const distance = targetPosition - startPosition;
         
         let startTime = null;
@@ -1604,6 +1630,7 @@ text-align: left;
       }
       });
     });
+    // JavaScript code remains the same 
   </script>
   
   

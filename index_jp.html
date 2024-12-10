@@ -20,7 +20,7 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
 
 </head>
-<body class="bg-light">
+<body>
   <style>
     *{
       font-family: 'Noto Sans TC', sans-serif;
@@ -31,6 +31,11 @@
 <div>
 <style>
       /* Nav-link Styling for Desktop */
+      .nav-link{
+        font-size: 21px;
+        
+      }
+
       .navbar-nav .nav-link {
         position: relative;
         text-decoration: none;
@@ -60,6 +65,14 @@
       .nav-link:hover{
         color:#b89517;
       }
+
+      .nav-link{
+        color:#363960;
+      }
+
+      .nav-link:focus{
+        color:#363960;
+      }
   
       /* Exclude underline for dropdown icon */
       .navbar-nav .nav-item.dropdown .nav-link::after {
@@ -80,13 +93,13 @@
         position: fixed;
         width: 100%;
         z-index: 1050;
-        height:140px;
+        height:180px;
     
       }
   
     .shrinkable-navbar.shrunk {
         padding: 0.4rem 0;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         
@@ -101,7 +114,7 @@
          
 
       .shrinkable-navbar .navbar-brand img {
-        max-height: 90px;
+        max-height: 113px;
         transition: all 0.4s ease-in-out;
       }
   
@@ -167,38 +180,75 @@
         background-color: #b89517;
       }
 
+      .menu-nav{
+        padding-right:164px;
+        padding-left:164px;
+      }
+
+      .navbar-nav {
+        gap:24px;
+      }
+
+
+
+@media (max-width: 1355px) {
+  
+  .menu-nav{
+        padding-right:16px;
+        padding-left:16px;
+      }
+
+      .navbar-nav {
+        gap:4px;
+      }
+
+      .logo{
+   max-width:200px;
+}
+
+.shrinkable-navbar {
+
+        height:140px;
+    
+      }
+}
+
+
+
+
+
+
+
     </style>
   
     <nav class="navbar navbar-expand-lg fixed-top navbar-light shrinkable-navbar" id="mainNavbar">
-      <div class="container">
+      <div class="container-fluid menu-nav">
         <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      <a class="navbar-brand" href="#"><img src="./img/logo-d.png" alt="Logo"></a>
+      <a class="navbar-brand" href="#"><img class="logo" src="./img/logo-d.png" alt="Logo"></a>
   
         <!-- Desktop Menu -->
         <div class="collapse navbar-collapse align-self-end">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-end">
             <li class="nav-item">
-              <a class="nav-link" href="#history">会社の沿革</a>
+              <a class="nav-link" href="#history">会社沿革</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#core">基本理念</a>
+              <a class="nav-link" href="#core">理念</a>
             </li>
             <li class="nav-item">
-<li class="nav-item">
-  <a class="nav-link" href="#process">作業プロセス</a>
-</li>
+              <a class="nav-link" href="#process">作業工程</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#factory">工場設備</a>
+              <a class="nav-link" href="#factory">工場案内</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">連絡方式</a>
+              <a class="nav-link" href="#contact">お問い合わせ</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link" href="#" id="languageDropdown" role="button" aria-expanded="false">
-                <img src="./img/icons/icon-language.png" alt="Settings" width="24" height="24">
+                <img src="./img/icons/icon-language.png" alt="Settings" width="35" height="35">
                           </a>
                           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
                 <li><a class="dropdown-item" href="./index.html">繁體中文</a></li>
@@ -215,11 +265,11 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <a class="nav-link" href="#history">会社の沿革</a>
-            <a class="nav-link" href="#core">基本理念</a>
-            <a class="nav-link" href="#process">作業プロセス</a>
-            <a class="nav-link" href="#factory">工場設備</a>
-            <a class="nav-link" href="#contact">連絡方式</a>
+            <a class="nav-link"  href="#history">会社沿革</a>
+            <a class="nav-link" href="#core">理念</a>
+            <a class="nav-link" href="#process">作業流程</a>
+            <a class="nav-link" href="#factory">工場案内</a>
+            <a class="nav-link" href="#contact">お問い合わせ</a>
             <a class="nav-link" href="./index.html">繁體中文</a>
             <a class="nav-link" href="./index_jp.html">日本語</a>
             <a class="nav-link" href="./index_en.html">English</a>
@@ -253,14 +303,29 @@
   <section class="hero-section">
 
     <div class="container">
-      <h1 class="hero-title">利得イノベーション、<br>常に心を込めて。</h1>
+      <h1 class="hero-title">リーダーイノベーションズは、<br>ペットの健康をリードする未来の力です。</h1>
 <style>
   .hero-title {
-
 font-weight: bold;
-font-size:90px;
 text-align: left;
-margin-top:40px;
+  position: absolute;
+  bottom: 60px;
+  font-size: 60px; /* Default for mobile */
+}
+
+@media (min-width: 768px) { /* Tablet */
+  .hero-title {
+    font-size: 90px;
+    bottom: 80px;
+
+  }
+}
+
+@media (min-width: 992px) { /* Desktop */
+  .hero-title {
+    font-size: 90px;
+    bottom: 100px;
+  }
 }
 </style>
     </div>
@@ -269,18 +334,69 @@ margin-top:40px;
   <section class="section-1">
     <style>
       .section-1{
-        padding-top:5%;
-        padding-bottom:5%;
+        padding-top:50px;
+        padding-bottom:60px;
       }
+
+  
+.section-title-desktop {
+  display: none;
+}
+
+.section-description {
+  color: #403e3e;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+
+}
+
+.section-title{
+  color: #e7bd1f;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  /* Show section-title-desktop on screens larger than 992px (desktop) */
+  .section-title-desktop {
+    display: block;
+    color: #e7bd1f;
+  font-family: "Inter-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  }
+}
+
+/* Ensure section-title-mobile is only visible on tablets and mobile */
+.section-title-mobile {
+  display: block;
+  color: #e7bd1f;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: clamp(36px, 2vw, 40px);
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  /* Hide section-title-mobile on screens larger than 992px (desktop) */
+  .section-title-mobile {
+    display: none;
+
+  }
+}
     </style>
     <div class="container" id="history">
       <div class="row">
         <div class="d-flex justify-content-center">
-          <div class="col-8 d-flex flex-column">
-          <h1 class="section-title mb-3">愛を基盤とし、テクノロジーを力に。</h1>
+          <div class="col-10 col-sm-10 col-md-12 col-xl-12 d-flex flex-column">
+          <h1 class="section-title-desktop mb-3">愛を原点に、<span style="color:#000000;">テクノロジーで進化する。</span></h1>
+          <h1 class="section-title-mobile mb-3">愛を原点に、<span style="color:#000000;">テクノロジーで進化する。</span></h1>
           <p class="section-description">
-            利得イノベーションは、ペットを愛し経験豊富なチームによって2023年に共同設立されました。最先端の自動化生産技術の開発に取り組み、ペットにとって最も健康的な食事を提供しています。原料、製造、包装、出荷に至るまで、すべての工程をチームが厳重に監視し、各製品の高品質を確保しています。
-            <span class="section-highlight">各製品の高品質を確保しています。</span>
+            リーダーイノベーションは、ペットへの深い愛情と豊富な経験を持つチームによって、2023年に設立されました。
+私たちは、最先端の自動化生産技術を駆使し、ペットにとって安心で健康的な食事を提供することに全力を注いでいます。原料の選定から製造、包装、出荷に至るまで、すべてのプロセスを徹底的に管理し、
+            <span class="section-highlight">、一つひとつの製品に高い品質をお約束します。</span>
           </p>
 
           </div>
@@ -289,8 +405,8 @@ margin-top:40px;
       </div>
       <div class="row">
         <!-- Image Section -->
-        <div class="d-flex justify-content-center">
-          <img class="section-image" src="./img/leader-sign.png" alt="Section Image">
+        <div class="d-flex justify-content-center pt-4">
+          <img class="section-image mb-4" src="./img/leader-sign.png" alt="Section Image">
         </div>
 </div>
 
@@ -299,13 +415,13 @@ margin-top:40px;
 
 
   <!--核心理念-->
-<section style="background-color: #eeeeee; padding: 20px 0;">
+<section style="background-color: #f7f6f5; padding: 100px 0;">
 
 <!-- Divider 1 核心理念-->
   <div class="container" id="core">
     <div class="section-divider">
       <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
-      <div class="section-divider-text">基本理念</div>
+      <div class="section-divider-text">理念</div>
       <div class="section-divider-line"></div>
       <img class="section-divider-right-img" src="./img/icons/start-grey.png" alt="Right Image" />
     </div>
@@ -336,21 +452,21 @@ margin-top:40px;
 
     <!-- Tabs -->
      <div class="tabs-container">
-    <div class="tabs d-flex justify-content-center">
+    <div class="tabs">
       <div class="tab active" data-slide="0">品質</div>
-      <div class="tab" data-slide="1">速度</div>
-      <div class="tab" data-slide="2">革新</div>
-      <div class="tab" data-slide="3">柔軟性</div>
+      <div class="tab" data-slide="1">スピード</div>
+      <div class="tab" data-slide="2">イノベーション</div>
+      <div class="tab" data-slide="3">柔軟な対応</div>
       <div class="toggle-background"></div>
     </div>
   </div>
 
     <!-- Paragraphs -->
-    <div class="paragraphs">
-      <div class="paragraph active">私たちは卓越した品質を追求し、製品とサービスの高い水準を確保して、お客様のニーズと期待に応えています。</div>
-      <div class="paragraph">私たちは効率と迅速な対応を重視し、スピーディで時間通りの納品とサービスを提供しています。</div>
-      <div class="paragraph">私たちは継続的なイノベーションに取り組み、新しい思考や解決策を追求し続け、製品とサービスの競争力を向上させることに努めています。</div>
-      <div class="paragraph">私たちは柔軟性を備え、市場の変化に応じて迅速に戦略と方向性を調整し、多様化する顧客のニーズと期待に応えることができます。</div>
+    <div class="paragraphs col-xl-10 col-md-10 col-xs-11 col-sm-11 mx-auto text-center">
+      <div class="paragraph active">卓越した品質を追求し、顧客の期待を超える高水準の製品とサービスを提供します。</div>
+      <div class="paragraph">効率と迅速な対応を重視し、迅速かつ正確な納品とサービスをお届けします。</div>
+      <div class="paragraph">常に新しいアイデアと解決策を探求し、製品とサービスの競争力を高めます。</div>
+      <div class="paragraph">市場の変化に迅速に対応し、多様化する顧客ニーズに合わせた戦略を柔軟に調整します。</div>
     </div>
   </div>
 
@@ -398,15 +514,16 @@ margin-top:40px;
   <style>
     /* Slides Wrapper */
     .value-img {
-      max-width: 400px;
-      max-height:400px;
-  
+      max-width: 450px;
+      max-height:450px;
+
     }
 
     .slider {
       display: flex;
       width: 100%;
       transition: transform 0.5s ease-in-out;
+      margin-bottom:50px;
     }
 
     .slider-container{
@@ -424,9 +541,12 @@ margin-top:40px;
       overflow: hidden;
     }
 
+/* Updated for responsive images and full visibility */
     .slide img {
-      max-width: 450px;
-      display: block;
+    width: 100%; /* Ensure the image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure block-level display for proper alignment */
+    max-width: 450px; /* Remove max-width restriction to show all */
     }
 
     /* Tab Navigation */
@@ -434,7 +554,7 @@ margin-top:40px;
  
       padding:0.1px;
       background-color:#e7e7e700;
-      max-width:500px;
+      max-width:600px;
       margin-left:auto;
       margin-right:auto;
       border-radius:400px;
@@ -444,15 +564,14 @@ margin-top:40px;
       position: relative;
       display: flex;
       justify-content: space-around;
-      margin-top: 20px;
       justify-content: center; /* Center the content horizontally */
       align-items: center;    /* Center the content vertically */
       margin: 20px auto;      /* Center the element itself */
-      padding: 6px 0;
+      padding: 16px 0;
       background-color: #fff;
       border-radius: 50px;
       overflow: hidden;
-      max-width: 400px;
+      max-width: 100%;
       border: 4px #fff solid;
    
     }
@@ -461,13 +580,13 @@ margin-top:40px;
       flex: 1;
       text-align: center;
 
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 18px;
+      font-weight: 900;
       color: #000;
       cursor: pointer;
       z-index: 2;
       position: relative;
-      max-width:100px;
+      max-width:100%;
     }
 
     .tab.active {
@@ -480,7 +599,7 @@ margin-top:40px;
       top: 0;
       left: 0;
       height: 100%;
-      background-color: #d4af37;
+      background-color: #E7BD1F;
       border-radius: 50px;
       z-index: 1;
       transition: transform 0.3s ease, width 0.3s ease;
@@ -490,8 +609,8 @@ margin-top:40px;
     .paragraphs {
       position: relative;
       margin-top: 20px;
-      min-height: 80px;
-      padding: 0 15px;
+      min-height: 90px;
+      padding: 0 40px;
     }
 
     .paragraph {
@@ -516,10 +635,10 @@ margin-top:40px;
 
     @media (max-width: 768px) {
       .paragraph {
-        font-size: 18px;
+        font-size: 24px;
       }
       .paragraphs {
-        min-height: 100px;
+        min-height: 110px;
       }
     }
   </style>
@@ -533,7 +652,7 @@ margin-top:40px;
   <div class="container" id="process">
     <div class="section-divider">
       <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
-      <div class="section-divider-text">作業プロセス</div>
+      <div class="section-divider-text">作業流程</div>
       <div class="section-divider-line"></div>
       <img class="section-divider-right-img" src="./img/icons/start-grey.png" alt="Right Image" />
     </div>
@@ -545,85 +664,85 @@ margin-top:40px;
       <div class="marquee">
         <!-- Original Gallery Items -->
         <div class="gallery-item">
-          <img src="./img/steps/step-1.png" alt="領料">
-          <p>資材の受け取り</p>
+          <img src="./img/steps/step-1.png" alt="原料受け入れ">
+          <p>原料受け入れ</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-2.png" alt="原料前處理">
-          <p>原材料の前処理</p>
+          <img src="./img/steps/step-2.png" alt="原料前処理">
+          <p>原料前処理</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-3.png" alt="成型">
+          <img src="./img/steps/step-3.png" alt="成形">
           <p>成形</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-4.png" alt="烘烤">
+          <img src="./img/steps/step-4.png" alt="焼成">
           <p>焼成</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-5.png" alt="半成品檢驗">
-          <p>中間製品検査</p>
+          <img src="./img/steps/step-5.png" alt="半製品検査">
+          <p>半製品検査</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-6.png" alt="包裝">
+          <img src="./img/steps/step-6.png" alt="包装">
           <p>包装</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-7.png" alt="X-Ray檢查">
+          <img src="./img/steps/step-7.png" alt="X線検査">
           <p>X線検査</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-8.png" alt="成品確認">
-          <p>完成品の確認</p>
+          <img src="./img/steps/step-8.png" alt="最終製品確認">
+          <p>最終製品確認</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-9.png" alt="入箱">
-          <p>箱詰め</p>
+          <img src="./img/steps/step-9.png" alt="梱包">
+          <p>梱包</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-10.png" alt="入庫">
-          <p>入庫</p>
+          <img src="./img/steps/step-10.png" alt="保管">
+          <p>保管</p>
         </div>
         <!-- Duplicate for Seamless Scrolling -->
         <div class="gallery-item">
-          <img src="./img/steps/step-1.png" alt="領料">
-          <p>資材の受け取り</p>
+          <img src="./img/steps/step-1.png" alt="原料受け入れ">
+          <p>原料受け入れ</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-2.png" alt="原料前處理">
-          <p>原材料の前処理</p>
+          <img src="./img/steps/step-2.png" alt="原料前処理">
+          <p>原料前処理</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-3.png" alt="成型">
+          <img src="./img/steps/step-3.png" alt="成形">
           <p>成形</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-4.png" alt="烘烤">
+          <img src="./img/steps/step-4.png" alt="焼成">
           <p>焼成</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-5.png" alt="半成品檢驗">
-          <p>中間製品検査</p>
+          <img src="./img/steps/step-5.png" alt="半製品検査">
+          <p>半製品検査</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-6.png" alt="包裝">
+          <img src="./img/steps/step-6.png" alt="包装">
           <p>包装</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-7.png" alt="X-Ray檢查">
+          <img src="./img/steps/step-7.png" alt="X線検査">
           <p>X線検査</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-8.png" alt="成品確認">
-          <p>完成品の確認</p>
+          <img src="./img/steps/step-8.png" alt="最終製品確認">
+          <p>最終製品確認</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-9.png" alt="入箱">
-          <p>箱詰め</p>
+          <img src="./img/steps/step-9.png" alt="梱包">
+          <p>梱包</p>
         </div>
         <div class="gallery-item">
-          <img src="./img/steps/step-10.png" alt="入庫">
-          <p>入庫</p>
+          <img src="./img/steps/step-10.png" alt="保管">
+          <p>保管</p>
         </div>
       </div>
 
@@ -641,7 +760,7 @@ margin-top:40px;
       .marquee {
         display: flex;
         gap: 20px;
-        animation: marquee-scroll 10s linear infinite;
+        animation: marquee-scroll 30s linear infinite;
         width: fit-content; /* Let content determine width */
       }
   
@@ -696,7 +815,7 @@ margin-top:40px;
 <div class="container" id="factory">
   <div class="section-divider">
     <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
-    <div class="section-divider-text">工場設備</div>
+    <div class="section-divider-text">工場案内</div>
     <div class="section-divider-line"></div>
     <img class="section-divider-right-img" src="./img/icons/start-grey.png" alt="Right Image" />
   </div>
@@ -711,7 +830,6 @@ margin-top:40px;
       align-items: center; 
       justify-content: center; 
     
-
   
   }
 
@@ -720,42 +838,51 @@ margin-top:40px;
   }
 
   .certificate span{
-   font-size:24px;
+   font-size:16px;
    color:#b89517;
    font-weight:500;
   }
+
+@media (min-width: 992px) {
+  .certificate span {
+    font-size:24px;
+  }
+}
 
  </style>
 
   <div class="d-flex flex-column certificate ">
     <img class="img-fluid" src="./img/1美國食品藥物管理局.png" alt="">
-    <span class="text-center">アメリカ食品医薬品局</span>
+    <span class="text-center">米国食品医薬品局 (FDA)</span>
   </div>
   <div class="d-flex flex-column certificate ">
     <img class="img-fluid" src="./img/2國際通用食品安全管理系統標準.png" alt="">
-    <span class="text-center">国際標準食品安全マネジメントシステム</span>
+    <span class="text-center">国際食品安全管理システム基準 (ISO)</span>
   </div>
   <div class="d-flex flex-column certificate ">
     <img class="img-fluid" src="./img/3危害分析重要管制點系統制度.png" alt="">
-    <span class="text-center">危害分析および重要管理点システム</span>
+    <span class="text-center">危害分析重要管理点 (HACCP)</span>
   </div>
   <div class="d-flex flex-column certificate ">
     <img class="img-fluid" src="./img/4優良製造規範.png" alt="">
-    <span class="text-center">適正製造規範</span>
+    <span class="text-center">優良製造規範(GMP)</span>
   </div>
 </div>
 
 
 <!--Factory Slider-->
-<div class="container">
+<div class="container-fluid">
+
+
+
 
   <div class="factor-slider">
     <div class="factor-slider-track">
-      <div class="factor-slider-slide active" data-image="./img/factory/烤箱.webp" data-description="業務用大型オーブン">
+      <div class="factor-slider-slide" data-image="./img/factory/烤箱.webp" data-description="業務用大型オーブン">
         <img src="./img/factory/烤箱-s.webp" alt="業務用大型オーブン">
         <p>業務用大型オーブン</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/x-ray.webp" data-description="X線包装検査装置">
+      <div class="factor-slider-slide active" data-image="./img/factory/x-ray.webp" data-description="X線包装検査装置">
         <img src="./img/factory/x-ray-s.webp" alt="X線包装検査装置">
         <p>X線包装検査装置</p>
       </div>
@@ -763,25 +890,25 @@ margin-top:40px;
         <img src="./img/factory/Air shower空氣浴塵室-s.webp" alt="エアシャワー">
         <p>エアシャワー</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/VEMAG連續式真空充機.webp" data-description="VEMAG連続式真空充填機">
-        <img src="./img/factory/VEMAG連續式真空填機-s.webp" alt="VEMAG連続式真空充填機">
-        <p>VEMAG連続式真空充填機</p>
+      <div class="factor-slider-slide" data-image="./img/factory/VEMAG連續式真空填機.webp" data-description="VEMAG真空充填機">
+        <img src="./img/factory/VEMAG連續式真空填機-s.webp" alt="VEMAG真空充填機">
+        <p>VEMAG真空充填機</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/刨肉絞肉機.webp" data-description="肉削り兼用ミンサー">
-        <img src="./img/factory/刨肉絞肉機-s.webp" alt="肉削り兼用ミンサー">
-        <p>肉削り兼用ミンサー</p>
+      <div class="factor-slider-slide" data-image="./img/factory/刨肉絞肉機.webp" data-description="スライサー＆ミンチ機">
+        <img src="./img/factory/刨肉絞肉機-s.webp" alt="スライサー＆ミンチ機">
+        <p>スライサー＆ミンチ機</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/雙軸混和桶.webp" data-description="二軸混合タンク">
-        <img src="./img/factory/雙軸混和桶-s.webp" alt="二軸混合タンク">
-        <p>二軸混合タンク</p>
+      <div class="factor-slider-slide" data-image="./img/factory/雙軸混和桶.webp" data-description="二軸ミキシングタンク">
+        <img src="./img/factory/雙軸混和桶-s.webp" alt="二軸ミキシングタンク">
+        <p>二軸ミキシングタンク</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/高速切片機.webp" data-description="高速スライサー">
         <img src="./img/factory/高速切片機-s.webp" alt="高速スライサー">
         <p>高速スライサー</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/蒸箱.webp" data-description="スチームボックス">
-        <img src="./img/factory/蒸箱-s.webp" alt="スチームボックス">
-        <p>スチームボックス</p>
+      <div class="factor-slider-slide" data-image="./img/factory/蒸箱.webp" data-description="スチームボックス（蒸気調理設備）">
+        <img src="./img/factory/蒸箱-s.webp" alt="スチームボックス（蒸気調理設備）">
+        <p>スチームボックス（蒸気調理設備）</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/連續式封口機.webp" data-description="連続式シーリング機">
         <img src="./img/factory/連續式封口機-s.webp" alt="連続式シーリング機">
@@ -791,35 +918,33 @@ margin-top:40px;
         <img src="./img/factory/真空按摩桶-s.webp" alt="真空マッサージタンク">
         <p>真空マッサージタンク</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/精密成型機.webp" data-description="精密成型機">
+      <div class="factor-slider-slide" data-image="./img/factory/精密成型機.webp" data-description="精密成形機">
         <img src="./img/factory/精密成型機-s.webp" alt="精密成形機">
         <p>精密成形機</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/實驗室.webp" data-description="実験室">
-        <img src="./img/factory/實驗室-s.webp" alt="実験室">
-        <p>実験室</p>
+      <div class="factor-slider-slide" data-image="./img/factory/實驗室.webp" data-description="研究・検査用ラボラトリー">
+        <img src="./img/factory/實驗室-s.webp" alt="研究・検査用ラボラトリー">
+        <p>研究・検査用ラボラトリー</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/金屬檢驗機.webp" data-description="金属検査機">
-        <img src="./img/factory/金屬檢驗機-s.webp" alt="金属検査機">
-        <p>金属検査機</p>
+      <div class="factor-slider-slide" data-image="./img/factory/金屬檢驗機.webp" data-description="金属検出機">
+        <img src="./img/factory/金屬檢驗機-s.webp" alt="金属検出機">
+        <p>金属検出機</p>
       </div>
 
     </div>
-    <div class="factor-slider-arrows">
+    <div class="factor-slider-arrows container">
       <button class="factor-slider-prev"></button>
       <button class="factor-slider-next"></button>
     </div>
   </div>
-
   <!-- Lightbox Modal -->
   <div style="z-index: 100000;" class="lightbox-modal">
     <div class="lightbox-content">
-      <button class="lightbox-close">&times;</button>
+      <button class="lightbox-close" style="display: flex; justify-content: center; align-items: center;">&times;</button>
       <img src="" alt="Lightbox Image">
       <p></p>
     </div>
   </div>
-
   <style>
     /* Slider Styles */
     .factor-slider {
@@ -838,16 +963,39 @@ margin-top:40px;
 
     .factor-slider-slide {
       box-sizing: border-box;
-      padding: 10px;
       text-align: center;
-      cursor: pointer; /* Indicate click for lightbox */
+      cursor: pointer;
+      min-width: 280px;
+      padding-left: 12px;
+      padding-right: 12px;
     }
 
     .factor-slider-slide img {
       width: 100%;
-      min-width: 200px;
+      box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+   
       border-radius: 10px;
       margin-bottom: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .factor-slider-slide {
+        min-width: 400px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+    }
+
+    @media (min-width: 992px) {
+      .factor-slider-slide {
+        min-width: 480px;
+       
+        padding-left: 20px;
+        padding-right: 20px;
+        
+      }
+  
     }
 
     .factor-slider-slide p {
@@ -859,7 +1007,8 @@ margin-top:40px;
 
     .factor-slider-slide.active img {
       transform: scale(1.1);
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.8s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     }
 
     /* Custom Arrow Styles */
@@ -958,8 +1107,8 @@ margin-top:40px;
 
     .lightbox-close {
       position: absolute;
-      top: -20px;
-      right: -20px;
+      top: 0;
+      right: 0;
       background-color: #b89517;
       color: #333;
       border: none;
@@ -971,6 +1120,7 @@ margin-top:40px;
       line-height: 40px;
       text-align: center;
       z-index: 1000;
+      transform: translate(50%, -50%);
     }
 
     @media (max-width: 768px) {
@@ -979,15 +1129,13 @@ margin-top:40px;
       }
       
       .lightbox-close {
-        top: -20px;
-        right: -10px;
+        transform: translate(50%, -50%);
       }
     }
 
     @media (max-width: 480px) {
       .lightbox-close {
-        top: -20px;
-        right: -5px;
+        transform: translate(50%, -50%);
       }
     }
   </style>
@@ -1003,14 +1151,25 @@ margin-top:40px;
   const modalDescription = modal.querySelector('p');
   const modalClose = modal.querySelector('.lightbox-close');
 
-  let currentIndex = 0;
+  let currentIndex = 1;
+
+  let startPosition = 0; // to track the initial touch/mouse position
+  let isDragging = false; // to track whether the user is dragging
 
   function updateSliderPosition() {
     const slideWidth = slides[0].getBoundingClientRect().width;
     const containerWidth = slider.offsetWidth;
 
     // Calculate offset for centering
-    const centerOffset = (containerWidth - slideWidth) / 1.8;
+    // Calculate different offsets for different screen sizes
+    let centerOffset;
+    if (window.innerWidth < 430) { // Mobile
+      centerOffset = (containerWidth - slideWidth) / 1.4;
+    } else if (window.innerWidth < 992) { // Tablet 
+      centerOffset = (containerWidth - slideWidth) / 1.8;
+    } else { // Desktop
+      centerOffset = (containerWidth - slideWidth) / 2.1 + (containerWidth - slideWidth) * 0.05;
+    }
 
     // Handle scaling effect for the active slide
     const activeSlide = slides[currentIndex];
@@ -1061,24 +1220,74 @@ margin-top:40px;
   // Update slider position on window resize to ensure proper alignment
   window.addEventListener('resize', updateSliderPosition);
 
+  // Touch and Mouse Events for Swipe Functionality
+  function handleSwipeStart(event) {
+    if (!event.touches) return; // Only handle touch events
+    isDragging = true;
+    startPosition = event.touches[0].clientX; // Get start position
+  }
+
+  function handleSwipeMove(event) {
+    if (!isDragging || !event.touches) return;
+
+    const movePosition = event.touches[0].clientX; // Get current position
+    const moveDistance = movePosition - startPosition; // Calculate swipe distance (reversed direction)
+
+    // Calculate new slider position based on swipe
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const translateX = -currentIndex * slideWidth + moveDistance;
+    track.style.transform = `translateX(${translateX}px)`;
+  }
+
+  function handleSwipeEnd(event) {
+    if (!isDragging) return;
+
+    isDragging = false;
+    const endPosition = event.changedTouches ? event.changedTouches[0].clientX : event.clientX;
+    const moveDistance = endPosition - startPosition; // Reversed direction
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    if (Math.abs(moveDistance) > slideWidth / 4) {
+      // If swipe distance is greater than a quarter of a slide width, move to next or previous slide
+      if (moveDistance > 0) {
+        moveToSlide(currentIndex - 1); // Swipe right -> Previous slide
+      } else {
+        moveToSlide(currentIndex + 1); // Swipe left -> Next slide
+      }
+    } else {
+      updateSliderPosition(); // No swipe large enough, reset position
+    }
+  }
+
+  // Add touch event listeners for swipe functionality
+  slider.addEventListener('touchstart', handleSwipeStart, { passive: false });
+  slider.addEventListener('touchmove', handleSwipeMove, { passive: false });
+  slider.addEventListener('touchend', handleSwipeEnd);
+
+  // Add mouse event listeners for swipe functionality
+  slider.addEventListener('mousedown', handleSwipeStart);
+  slider.addEventListener('mousemove', handleSwipeMove);
+  slider.addEventListener('mouseup', handleSwipeEnd);
+  slider.addEventListener('mouseleave', handleSwipeEnd); // Handle mouse leaving the slider area
+
   // Initialize the slider position
   updateSliderPosition();
 })();
-
   </script>
 </div>
 <!--Factory Slider End-->
 
-<!-- Divider 聯絡立德 -->
+<!-- Divider 聯絡利得 -->
 <div class="container" id="contact">
   <div class="section-divider">
     <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
-    <div class="section-divider-text">連絡方式</div>
+    <div class="section-divider-text">お問い合わせ</div>
     <div class="section-divider-line"></div>
     <img class="section-divider-right-img" src="./img/icons/start-grey.png" alt="Right Image" />
   </div>
 </div>
-<!-- Divider 聯絡立德  End-->
+<!-- Divider 聯絡利得 End-->
 
 <div class="container mt-4">
   <style>
@@ -1088,36 +1297,44 @@ margin-top:40px;
       margin-bottom: 10px;
     }
     .info-item .icon {
-      font-weight: bold;
+      font-weight: 400;
       margin-right: 1px;
     }
     .info-box{
-      padding-left:50px;
       padding-bottom:80px;
       font-size:24px;
-      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .info-box {
+        padding-left: 50px;
+      }
     }
     .strong{
       font-weight:900;
     }
   </style>
-  <div class="info-box">
-    <div class="info-item">
-      <span class="icon">丨</span>
-      <div>
-        <strong class="strong">工場住所：</strong>239新北市鶯歌区中正三路156巷8-12号
+  <div class="d-flex justify-content-center">
+    <div class="info-box col-10 col-sm-10 col-md-12 col-xl-12 d-flex flex-column">
+      <div class="info-item">
+        <div>
+          <strong class="strong" style="border-left: 4px solid #000; padding-left: 8px; display: inline-block; line-height: 1.0;">住所：</strong><span> 〒239 台湾新北市鶯歌区中正三路156巷8-12号</span>
+        </div>
       </div>
-    </div>
-    <div class="info-item">
-      <span class="icon">丨</span>
-      <div>
-        <strong class="strong">営業時間：</strong>月曜〜金曜 08:00〜17:30
+      <div class="info-item">
+        <div>
+          <strong class="strong" style="border-left: 4px solid #000; padding-left: 8px; display: inline-block; line-height: 1.0;">営業時間：</strong><span> 月曜日～金曜日 08:00～17:30</span>
+        </div>
       </div>
-    </div>
-    <div class="info-item">
-      <span class="icon">丨</span>
-      <div>
-        <strong class="strong">電話番号：</strong>+886 2 2679 1868
+      <div class="info-item">
+        <div>
+          <strong class="strong" style="border-left: 4px solid #000; padding-left: 8px; display: inline-block; line-height: 1.0;">電話番号：</strong><span> +886 2 2679 1868</span>
+        </div>
+      </div>
+      <div class="info-item">
+        <div>
+          <strong class="strong" style="border-left: 4px solid #000; padding-left: 8px; display: inline-block; line-height: 1.0;">メール： </strong><span>  Bruce@leader-petfood.com</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1126,13 +1343,12 @@ margin-top:40px;
     <!--地址-->
 
     <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.737509531727!2d121.3308321110904!3d24.941010541937043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681947b81f49df%3A0x3595cd14e287f500!2sNo.%208-12%E8%99%9F%2C%20Lane%20156%2C%20Zhongzhengsan%20Rd%2C%20Yingge%20District%2C%20New%20Taipei%20City%2C%20239!5e0!3m2!1sen!2stw!4v1732082622559!5m2!1sen!2stw" 
-  style="width: 100%; height: 60vh; border: 0;" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.7376523637936!2d121.3308321108408!3d24.941005677784567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681947b81f49df%3A0x3595cd14e287f500!2z44CSMjM5IOaWsOWMl-W4guemu-atjOWNgOS4reato-S4iuiureGDlTjniYzlj7c!5e0!3m2!1sja!2stw!4v1733454871771!5m2!1sja!2stw" 
+      style="width: 100%; height: 80vh; border: 0;" 
   allowfullscreen="" 
   loading="lazy" 
   referrerpolicy="no-referrer-when-downgrade">
 </iframe>
-
 
 
 <!-- Footer Image -->
@@ -1153,7 +1369,8 @@ margin-top:40px;
     .footer-image {
       position: relative;
       z-index: 999999;
-      max-width: 100%;
+      max-width: 1100px;
+      min-width:300px;
       height: auto;
     }
     
@@ -1218,7 +1435,7 @@ margin-top:40px;
     <style>
       .line-span {
         display: block; /* Allows it to behave like a block-level element */
-        height: 2px; /* Adjust thickness of the line */
+        height: 1px; /* Adjust thickness of the line */
         background-color: #000; /* Line color (black in this case) */
         width: 100%; /* Full-width line */
         margin: 20px 0; /* Optional: Add spacing above and below the line */
@@ -1231,7 +1448,12 @@ margin-top:40px;
     
 </footer>
 
+
 <!-- Footer -->
+ 
+
+
+
 
 
 
@@ -1327,7 +1549,7 @@ margin-top:40px;
     // Show/hide scroll to top button
     window.addEventListener('scroll', function() {
       const scrollButton = document.querySelector('.scroll-to-top');
-      if (window.pageYOffset > 300) { // Show button after 300px scroll
+      if (window.pageYOffset > 3400) { // Show button after 300px scroll
         scrollButton.classList.add('visible');
       } else {
         scrollButton.classList.remove('visible');
@@ -1359,7 +1581,61 @@ margin-top:40px;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();  // Prevent default anchor behavior
   
+        // Get the target section
+        const targetId = this.getAttribute('href').substring(1);  // Get the ID from href, excluding the "#"
+        const targetElement = document.getElementById(targetId);
+        
+        // Close offcanvas if it exists
+        const offcanvas = document.querySelector('.offcanvas');
+        if (offcanvas) {
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+          if (bsOffcanvas) {
+            bsOffcanvas.hide();
+          }
+        }
+        
+        if (targetElement) {
+          // Get the position of the target element and the height of the viewport
+          const offsetTop = targetElement.offsetTop;
+          const viewportHeight = window.innerHeight;
+        // Create easing function
+        const easeInOutQuad = (t) => {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; // Faster cubic easing
+        };
+        // Get start position and calculate distance
+        const startPosition = window.pageYOffset;
+        const targetPosition = offsetTop - (viewportHeight / 3) + (targetElement.offsetHeight / 2);
+        const distance = targetPosition - startPosition;
+        
+        let startTime = null;
+        const duration = 10; // Animation duration in milliseconds
+
+        // Animation function
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+          
+          const easeProgress = easeInOutQuad(progress);
+          window.scrollTo(0, startPosition + (distance * easeProgress));
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+        }
+
+        // Start animation
+        requestAnimationFrame(animation);
+      }
+      });
+    });
+    // JavaScript code remains the same 
+  </script>
   
   
 </body>

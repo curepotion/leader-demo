@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>利得Innovation</title>
+  <title>利得創新</title>
   <link rel="icon" href="favicon.ico" type="./img/icons/leader.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/leader.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/leader.ico">
@@ -20,7 +20,7 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
 
 </head>
-<body class="bg-light">
+<body>
   <style>
     *{
       font-family: 'Noto Sans TC', sans-serif;
@@ -31,6 +31,12 @@
 <div>
 <style>
       /* Nav-link Styling for Desktop */
+      .nav-link{
+        font-size: 18px;
+        font-weight:600;
+        
+      }
+
       .navbar-nav .nav-link {
         position: relative;
         text-decoration: none;
@@ -60,6 +66,14 @@
       .nav-link:hover{
         color:#b89517;
       }
+
+      .nav-link{
+        color:#363960;
+      }
+
+      .nav-link:focus{
+        color:#363960;
+      }
   
       /* Exclude underline for dropdown icon */
       .navbar-nav .nav-item.dropdown .nav-link::after {
@@ -80,13 +94,13 @@
         position: fixed;
         width: 100%;
         z-index: 1050;
-        height:140px;
+        height:180px;
     
       }
   
     .shrinkable-navbar.shrunk {
         padding: 0.4rem 0;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         
@@ -101,7 +115,7 @@
          
 
       .shrinkable-navbar .navbar-brand img {
-        max-height: 90px;
+        max-height: 113px;
         transition: all 0.4s ease-in-out;
       }
   
@@ -167,26 +181,65 @@
         background-color: #b89517;
       }
 
+      .menu-nav{
+        padding-right:164px;
+        padding-left:164px;
+      }
+
+      .navbar-nav {
+        gap:24px;
+      }
+
+
+
+@media (max-width: 1355px) {
+  
+  .menu-nav{
+        padding-right:16px;
+        padding-left:16px;
+      }
+
+      .navbar-nav {
+        gap:4px;
+      }
+
+      .logo{
+   max-width:200px;
+}
+
+.shrinkable-navbar {
+
+        height:140px;
+    
+      }
+}
+
+
+
+
+
+
+
     </style>
   
     <nav class="navbar navbar-expand-lg fixed-top navbar-light shrinkable-navbar" id="mainNavbar">
-      <div class="container">
+      <div class="container-fluid menu-nav">
         <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      <a class="navbar-brand" href="#"><img src="./img/logo-d.png" alt="Logo"></a>
+      <a class="navbar-brand" href="#"><img class="logo" src="./img/logo-d.png" alt="Logo"></a>
   
         <!-- Desktop Menu -->
         <div class="collapse navbar-collapse align-self-end">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-end">
             <li class="nav-item">
-              <a class="nav-link" href="#history">History</a>
+              <a class="nav-link" href="#history">Milestones</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#core">Concept</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#process">Process</a>
+              <a class="nav-link" href="#process">Procedure</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#factory">Equipment</a>
@@ -195,15 +248,15 @@
               <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item dropdown">
-  <a class="nav-link" href="#" id="languageDropdown" role="button" aria-expanded="false">
-    <img src="./img/icons/icon-language.png" alt="Settings" width="24" height="24">
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-    <li><a class="dropdown-item" href="./index.html">繁體中文</a></li>
-    <li><a class="dropdown-item" href="./index_jp.html">日本語</a></li>
-    <li><a class="dropdown-item" href="./index_en.html">English</a></li>
-              </ul>
-            </li>
+              <a class="nav-link" href="#" id="languageDropdown" role="button" aria-expanded="false">
+                <img src="./img/icons/icon-language.png" alt="Settings" width="35" height="35">
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="./index.html">繁體中文</a></li>
+                <li><a class="dropdown-item" href="./index_jp.html">日本語</a></li>
+                <li><a class="dropdown-item" href="./index_en.html">English</a></li>
+                          </ul>
+                        </li>
           </ul>
         </div>
   
@@ -213,9 +266,9 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <a class="nav-link" href="#history">History</a>
+            <a class="nav-link"  href="#history">Milestones</a>
             <a class="nav-link" href="#core">Concept</a>
-            <a class="nav-link" href="#process">Process</a>
+            <a class="nav-link" href="#process">Procedure</a>
             <a class="nav-link" href="#factory">Equipment</a>
             <a class="nav-link" href="#contact">Contact</a>
             <a class="nav-link" href="./index.html">繁體中文</a>
@@ -251,32 +304,98 @@
   <section class="hero-section">
 
     <div class="container">
-      <h1 class="hero-title">Leader Innovations pet food<br>always make all-out effort</h1>
-<style>.hero-title {
+      <h1 class="hero-title">Rooted in Love, <br>Powered by Science.</h1>
+<style>
+  .hero-title {
+font-weight: bold;
+text-align: left;
+  position: absolute;
+  bottom: 60px;
+  font-size: 60px; /* Default for mobile */
+}
 
-  font-weight: bold;
-  font-size:50px;
-  text-align: left;
-  margin-top:40px;
-}</style>
+@media (min-width: 768px) { /* Tablet */
+  .hero-title {
+    font-size: 90px;
+    bottom: 80px;
+
+  }
+}
+
+@media (min-width: 992px) { /* Desktop */
+  .hero-title {
+    font-size: 90px;
+    bottom: 100px;
+  }
+}
+</style>
     </div>
   </section>
    <!-- Section 2-->
   <section class="section-1">
     <style>
       .section-1{
-        padding-top:5%;
-        padding-bottom:5%;
+        padding-top:50px;
+        padding-bottom:60px;
       }
+
+  
+.section-title-desktop {
+  display: none;
+}
+
+.section-description {
+  color: #403e3e;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+
+}
+
+.section-title{
+  color: #e7bd1f;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  /* Show section-title-desktop on screens larger than 992px (desktop) */
+  .section-title-desktop {
+    display: block;
+    color: #e7bd1f;
+  font-family: "Inter-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  }
+}
+
+/* Ensure section-title-mobile is only visible on tablets and mobile */
+.section-title-mobile {
+  display: block;
+  color: #e7bd1f;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: clamp(36px, 2vw, 40px);
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  /* Hide section-title-mobile on screens larger than 992px (desktop) */
+  .section-title-mobile {
+    display: none;
+
+  }
+}
     </style>
     <div class="container" id="history">
       <div class="row">
         <div class="d-flex justify-content-center">
-          <div class="col-8 d-flex flex-column">
-          <h1 class="section-title mb-3">With love as our foundation and technology as our strength.</h1>
+          <div class="col-10 col-sm-10 col-md-12 col-xl-12 d-flex flex-column">
+          <h1 class="section-title-desktop mb-3">Leader Innovation, <span style="color:#000000;">Driven by Dedication.</span></h1>
+          <h1 class="section-title-mobile mb-3">Rooted in Love<span style="color:#000000;"><br>Powered by Science.</span></h1>
           <p class="section-description">
-            Leader Innovations Petfood CORP. was founded in 2023 by a team of experienced pet lovers dedicated to developing advanced automated production technology to provide the healthiest diets for pets. From sourcing raw materials, production processes, packaging, to shipping, each step is carefully monitored by our team 
-            <span class="section-highlight">ensure the highest quality in every product.</span>
+            Leader Innovations Petfood CORP.  founded in 2023 by a team of passionate pet lovers with extensive experience in pet food manufacturing. Dedicated to developing cutting-edge automated production technologies, the company aims to provide the healthiest diets for pets. From raw materials and production processes to packaging and shipping, every step is meticulously monitored by the team to ensure the <span class="section-highlight">highest quality in every piece of food.</span>
           </p>
 
           </div>
@@ -285,8 +404,8 @@
       </div>
       <div class="row">
         <!-- Image Section -->
-        <div class="d-flex justify-content-center">
-          <img class="section-image" src="./img/leader-sign.png" alt="Section Image">
+        <div class="d-flex justify-content-center pt-4">
+          <img class="section-image mb-4" src="./img/leader-sign.png" alt="Section Image">
         </div>
 </div>
 
@@ -294,10 +413,10 @@
   </section>
 
 
-  <!--Core Concept-->
-<section style="background-color: #eeeeee; padding: 20px 0;">
+  <!--核心理念-->
+<section style="background-color: #f7f6f5; padding: 100px 0;">
 
-<!-- Divider 1 Core Concept-->
+<!-- Divider 1 核心理念-->
   <div class="container" id="core">
     <div class="section-divider">
       <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
@@ -308,7 +427,7 @@
   </div>
 
 
-<!-- Divider 1 Core Concept End-->
+<!-- Divider 1 核心理念 End-->
 
 <!-- Tab Slider-->
 
@@ -332,9 +451,9 @@
 
     <!-- Tabs -->
      <div class="tabs-container">
-    <div class="tabs d-flex justify-content-center">
+    <div class="tabs">
       <div class="tab active" data-slide="0">Quality</div>
-      <div class="tab" data-slide="1">Speed</div>
+      <div class="tab" data-slide="1">Efficiency</div>
       <div class="tab" data-slide="2">Innovation</div>
       <div class="tab" data-slide="3">Flexibility</div>
       <div class="toggle-background"></div>
@@ -342,11 +461,11 @@
   </div>
 
     <!-- Paragraphs -->
-    <div class="paragraphs">
+    <div class="paragraphs col-xl-10 col-md-10 col-xs-11 col-sm-11 mx-auto text-center">
       <div class="paragraph active">We pursue excellence in quality, ensuring high standards in our products and services to meet customer needs and expectations.</div>
       <div class="paragraph">We prioritize efficiency and respond quickly to customer requests to provide fast, on-time delivery and service.</div>
       <div class="paragraph">We are committed to continuous innovation, constantly seeking new ideas and solutions to enhance the competitiveness of our products and services.</div>
-      <div class="paragraph">We possess flexibility, enabling us to swiftly adjust strategies and directions in response to market changes, meeting the diverse needs and expectations of our customers.</div>
+      <div class="paragraph">We have the flexibility to quickly adjust our strategy and direction in response to market changes to meet the diverse needs and expectations of our customers.</div>
     </div>
   </div>
 
@@ -394,8 +513,8 @@
   <style>
     /* Slides Wrapper */
     .value-img {
-      max-width: 400px;
-      max-height:400px;
+      max-width: 450px;
+      max-height:450px;
 
     }
 
@@ -403,6 +522,7 @@
       display: flex;
       width: 100%;
       transition: transform 0.5s ease-in-out;
+      margin-bottom:50px;
     }
 
     .slider-container{
@@ -420,9 +540,12 @@
       overflow: hidden;
     }
 
+/* Updated for responsive images and full visibility */
     .slide img {
-      max-width: 450px;
-      display: block;
+    width: 100%; /* Ensure the image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure block-level display for proper alignment */
+    max-width: 450px; /* Remove max-width restriction to show all */
     }
 
     /* Tab Navigation */
@@ -440,7 +563,7 @@
       position: relative;
       display: flex;
       justify-content: space-around;
-      margin-top: 20px;
+     
       justify-content: center; /* Center the content horizontally */
       align-items: center;    /* Center the content vertically */
       margin: 20px auto;      /* Center the element itself */
@@ -457,8 +580,8 @@
       flex: 1;
       text-align: center;
 
-      font-size: 17px;
-      font-weight: bold;
+      font-size: 16px;
+      font-weight: 900;
       color: #000;
       cursor: pointer;
       z-index: 2;
@@ -476,7 +599,7 @@
       top: 0;
       left: 0;
       height: 100%;
-      background-color: #d4af37;
+      background-color: #E7BD1F;
       border-radius: 50px;
       z-index: 1;
       transition: transform 0.3s ease, width 0.3s ease;
@@ -486,15 +609,15 @@
     .paragraphs {
       position: relative;
       margin-top: 20px;
-      min-height: 80px;
-      padding: 0 15px;
+      min-height: 90px;
+      padding: 0 40px;
     }
 
     .paragraph {
       position: absolute;
       width: 100%;
       text-align: center;
-      font-size: 24px;
+      font-size: 18px;
       font-weight:400;
       color:#000;
       opacity: 0;
@@ -515,21 +638,21 @@
         font-size: 18px;
       }
       .paragraphs {
-        min-height: 100px;
+        min-height: 110px;
       }
     }
   </style>
 </div>
 </section> 
-   <!--Core Concept-->
+   <!--核心理念-->
    
 <!-- Tab Slider End-->
 
-  <!-- Divider 2 Operational Process-->
+  <!-- Divider 2 作業流程-->
   <div class="container" id="process">
     <div class="section-divider">
       <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
-      <div class="section-divider-text">Process</div>
+      <div class="section-divider-text">Procedure</div>
       <div class="section-divider-line"></div>
       <img class="section-divider-right-img" src="./img/icons/start-grey.png" alt="Right Image" />
     </div>
@@ -554,7 +677,7 @@
         </div>
         <div class="gallery-item">
           <img src="./img/steps/step-4.png" alt="烘烤">
-          <p>Baking</p>
+          <p>Baking / Dehydrating</p>
         </div>
         <div class="gallery-item">
           <img src="./img/steps/step-5.png" alt="半成品檢驗">
@@ -574,11 +697,11 @@
         </div>
         <div class="gallery-item">
           <img src="./img/steps/step-9.png" alt="入箱">
-          <p>Boxing</p>
+          <p>Packing into Cartons</p>
         </div>
         <div class="gallery-item">
           <img src="./img/steps/step-10.png" alt="入庫">
-          <p>Warehousing</p>
+          <p>Stocking</p>
         </div>
         <!-- Duplicate for Seamless Scrolling -->
         <div class="gallery-item">
@@ -595,7 +718,7 @@
         </div>
         <div class="gallery-item">
           <img src="./img/steps/step-4.png" alt="烘烤">
-          <p>Baking</p>
+          <p>Baking / Dehydrating</p>
         </div>
         <div class="gallery-item">
           <img src="./img/steps/step-5.png" alt="半成品檢驗">
@@ -615,11 +738,11 @@
         </div>
         <div class="gallery-item">
           <img src="./img/steps/step-9.png" alt="入箱">
-          <p>Boxing</p>
+          <p>Packing into Cartons</p>
         </div>
         <div class="gallery-item">
           <img src="./img/steps/step-10.png" alt="入庫">
-          <p>Warehousing</p>
+          <p>Stocking</p>
         </div>
       </div>
 
@@ -637,7 +760,7 @@
       .marquee {
         display: flex;
         gap: 20px;
-        animation: marquee-scroll 10s linear infinite;
+        animation: marquee-scroll 30s linear infinite;
         width: fit-content; /* Let content determine width */
       }
   
@@ -688,7 +811,7 @@
   
    <!--Marquee　End-->
 
-   <!-- Divider Factory Equipment -->
+   <!-- Divider 工廠設備 -->
 <div class="container" id="factory">
   <div class="section-divider">
     <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
@@ -697,7 +820,7 @@
     <img class="section-divider-right-img" src="./img/icons/start-grey.png" alt="Right Image" />
   </div>
 </div>
-<!-- Divider Factory Equipment End-->
+<!-- Divider 工廠設備 End-->
 
 <div class="container d-flex justify-content-center">
  <style>
@@ -707,7 +830,6 @@
       align-items: center; 
       justify-content: center; 
     
-
   
   }
 
@@ -716,43 +838,51 @@
   }
 
   .certificate span{
-
+   font-size:16px;
    color:#b89517;
    font-weight:500;
   }
 
+@media (min-width: 992px) {
+  .certificate span {
+    font-size:24px;
+  }
+}
+
  </style>
 
   <div class="d-flex flex-column certificate ">
-    <img class="img-fluid" src="./img/1美國食品藥物管理局.png" alt="">
+    <img class="img-fluid" src="./img/1美國食品藥物管理局.png" alt="U.S. Food and Drug Administration">
     <span class="text-center"></span>
   </div>
   <div class="d-flex flex-column certificate ">
-    <img class="img-fluid" src="./img/2國際通用食品安全管理系統標準.png" alt="">
+    <img class="img-fluid" src="./img/2國際通用食品安全管理系統標準.png" alt="International Organization for Standardization">
     <span class="text-center"></span>
   </div>
   <div class="d-flex flex-column certificate ">
-    <img class="img-fluid" src="./img/3危害分析重要管制點系統制度.png" alt="">
+    <img class="img-fluid" src="./img/3危害分析重要管制點系統制度.png" alt="Hazard Analysis and Critical Control Points System">
     <span class="text-center"></span>
   </div>
   <div class="d-flex flex-column certificate ">
-    <img class="img-fluid" src="./img/4優良製造規範.png" alt="">
+    <img class="img-fluid" src="./img/4優良製造規範.png" alt="Good Manufacturing Practice">
     <span class="text-center"></span>
   </div>
 </div>
 
 
 <!--Factory Slider-->
-<div class="container">
+<div class="container-fluid">
+
+
 
 
   <div class="factor-slider">
     <div class="factor-slider-track">
-      <div class="factor-slider-slide active" data-image="./img/factory/烤箱.webp" data-description="Professional-Grade Large Oven">
-        <img src="./img/factory/烤箱-s.webp" alt="Professional-Grade Large Oven">
-        <p>Professional-Grade Large Oven</p>
+      <div class="factor-slider-slide" data-image="./img/factory/烤箱.webp" data-description="Professional-Grade Large Oven">
+        <img src="./img/factory/烤箱-s.webp" alt="Commercial Oven">
+        <p>Commercial Oven</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/x-ray.webp" data-description="X-Ray Packaging Inspection Machine">
+      <div class="factor-slider-slide active" data-image="./img/factory/x-ray.webp" data-description="X-Ray Packaging Inspection Machine">
         <img src="./img/factory/x-ray-s.webp" alt="X-Ray Packaging Inspection Machine">
         <p>X-Ray Packaging Inspection Machine</p>
       </div>
@@ -760,7 +890,7 @@
         <img src="./img/factory/Air shower空氣浴塵室-s.webp" alt="Air Shower Dust Removal Room">
         <p>Air Shower Dust Removal Room</p>
       </div>
-      <div class="factor-slider-slide" data-image="./img/factory/VEMAG連續式真空充機.webp" data-description="VEMAG vacuum filling machines">
+      <div class="factor-slider-slide" data-image="./img/factory/VEMAG連續式真空填機.webp" data-description="VEMAG vacuum filling machines">
         <img src="./img/factory/VEMAG連續式真空填機-s.webp" alt="VEMAG vacuum filling machines">
         <p>VEMAG vacuum filling machines</p>
       </div>
@@ -777,24 +907,24 @@
         <p>High-Speed Slicer</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/蒸箱.webp" data-description="Steaming Box">
-        <img src="./img/factory/蒸箱-s.webp" alt="Steaming Box">
-        <p>Steaming Box</p>
+        <img src="./img/factory/蒸箱-s.webp" alt="Commercial steamer">
+        <p>Commercial steamer</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/連續式封口機.webp" data-description="Continuous Sealing Machine">
         <img src="./img/factory/連續式封口機-s.webp" alt="Continuous Sealing Machine">
         <p>Continuous Sealing Machine</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/真空按摩桶.webp" data-description="Vacuum Massage Tank">
-        <img src="./img/factory/真空按摩桶-s.webp" alt="Vacuum Massage Tank">
-        <p>Vacuum Massage Tank</p>
+        <img src="./img/factory/真空按摩桶-s.webp" alt="Vacuum Massage Tumblers Machine">
+        <p>Vacuum Massage Tumblers Machine</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/精密成型機.webp" data-description="Precision Forming Machine">
         <img src="./img/factory/精密成型機-s.webp" alt="Precision Forming Machine">
         <p>Precision Forming Machine</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/實驗室.webp" data-description="Research Laboratory">
-        <img src="./img/factory/實驗室-s.webp" alt="Research Laboratory">
-        <p>Research Laboratory</p>
+        <img src="./img/factory/實驗室-s.webp" alt="Internal Lab">
+        <p>Internal Lab</p>
       </div>
       <div class="factor-slider-slide" data-image="./img/factory/金屬檢驗機.webp" data-description="Metal Detector">
         <img src="./img/factory/金屬檢驗機-s.webp" alt="Metal Detector">
@@ -802,16 +932,15 @@
       </div>
 
     </div>
-    <div class="factor-slider-arrows">
+    <div class="factor-slider-arrows container">
       <button class="factor-slider-prev"></button>
       <button class="factor-slider-next"></button>
     </div>
   </div>
-
   <!-- Lightbox Modal -->
   <div style="z-index: 100000;" class="lightbox-modal">
     <div class="lightbox-content">
-      <button class="lightbox-close">&times;</button>
+      <button class="lightbox-close" style="display: flex; justify-content: center; align-items: center;">&times;</button>
       <img src="" alt="Lightbox Image">
       <p></p>
     </div>
@@ -834,16 +963,39 @@
 
     .factor-slider-slide {
       box-sizing: border-box;
-      padding: 10px;
       text-align: center;
-      cursor: pointer; /* Indicate click for lightbox */
+      cursor: pointer;
+      min-width: 280px;
+      padding-left: 12px;
+      padding-right: 12px;
     }
 
     .factor-slider-slide img {
       width: 100%;
-      min-width: 200px;
+      box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+   
       border-radius: 10px;
       margin-bottom: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .factor-slider-slide {
+        min-width: 400px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+    }
+
+    @media (min-width: 992px) {
+      .factor-slider-slide {
+        min-width: 480px;
+       
+        padding-left: 20px;
+        padding-right: 20px;
+        
+      }
+  
     }
 
     .factor-slider-slide p {
@@ -855,7 +1007,8 @@
 
     .factor-slider-slide.active img {
       transform: scale(1.1);
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.8s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     }
 
     /* Custom Arrow Styles */
@@ -954,8 +1107,8 @@
 
     .lightbox-close {
       position: absolute;
-      top: -20px;
-      right: -20px;
+      top: 0;
+      right: 0;
       background-color: #b89517;
       color: #333;
       border: none;
@@ -967,6 +1120,7 @@
       line-height: 40px;
       text-align: center;
       z-index: 1000;
+      transform: translate(50%, -50%);
     }
 
     @media (max-width: 768px) {
@@ -975,15 +1129,13 @@
       }
       
       .lightbox-close {
-        top: -20px;
-        right: -10px;
+        transform: translate(50%, -50%);
       }
     }
 
     @media (max-width: 480px) {
       .lightbox-close {
-        top: -20px;
-        right: -5px;
+        transform: translate(50%, -50%);
       }
     }
   </style>
@@ -999,14 +1151,25 @@
   const modalDescription = modal.querySelector('p');
   const modalClose = modal.querySelector('.lightbox-close');
 
-  let currentIndex = 0;
+  let currentIndex = 1;
+
+  let startPosition = 0; // to track the initial touch/mouse position
+  let isDragging = false; // to track whether the user is dragging
 
   function updateSliderPosition() {
     const slideWidth = slides[0].getBoundingClientRect().width;
     const containerWidth = slider.offsetWidth;
 
     // Calculate offset for centering
-    const centerOffset = (containerWidth - slideWidth) / 1.8;
+    // Calculate different offsets for different screen sizes
+    let centerOffset;
+    if (window.innerWidth < 430) { // Mobile
+      centerOffset = (containerWidth - slideWidth) / 1.4;
+    } else if (window.innerWidth < 992) { // Tablet 
+      centerOffset = (containerWidth - slideWidth) / 1.8;
+    } else { // Desktop
+      centerOffset = (containerWidth - slideWidth) / 2.1 + (containerWidth - slideWidth) * 0.05;
+    }
 
     // Handle scaling effect for the active slide
     const activeSlide = slides[currentIndex];
@@ -1057,25 +1220,74 @@
   // Update slider position on window resize to ensure proper alignment
   window.addEventListener('resize', updateSliderPosition);
 
+  // Touch and Mouse Events for Swipe Functionality
+  function handleSwipeStart(event) {
+    if (!event.touches) return; // Only handle touch events
+    isDragging = true;
+    startPosition = event.touches[0].clientX; // Get start position
+  }
+
+  function handleSwipeMove(event) {
+    if (!isDragging || !event.touches) return;
+
+    const movePosition = event.touches[0].clientX; // Get current position
+    const moveDistance = movePosition - startPosition; // Calculate swipe distance (reversed direction)
+
+    // Calculate new slider position based on swipe
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const translateX = -currentIndex * slideWidth + moveDistance;
+    track.style.transform = `translateX(${translateX}px)`;
+  }
+
+  function handleSwipeEnd(event) {
+    if (!isDragging) return;
+
+    isDragging = false;
+    const endPosition = event.changedTouches ? event.changedTouches[0].clientX : event.clientX;
+    const moveDistance = endPosition - startPosition; // Reversed direction
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    if (Math.abs(moveDistance) > slideWidth / 4) {
+      // If swipe distance is greater than a quarter of a slide width, move to next or previous slide
+      if (moveDistance > 0) {
+        moveToSlide(currentIndex - 1); // Swipe right -> Previous slide
+      } else {
+        moveToSlide(currentIndex + 1); // Swipe left -> Next slide
+      }
+    } else {
+      updateSliderPosition(); // No swipe large enough, reset position
+    }
+  }
+
+  // Add touch event listeners for swipe functionality
+  slider.addEventListener('touchstart', handleSwipeStart, { passive: false });
+  slider.addEventListener('touchmove', handleSwipeMove, { passive: false });
+  slider.addEventListener('touchend', handleSwipeEnd);
+
+  // Add mouse event listeners for swipe functionality
+  slider.addEventListener('mousedown', handleSwipeStart);
+  slider.addEventListener('mousemove', handleSwipeMove);
+  slider.addEventListener('mouseup', handleSwipeEnd);
+  slider.addEventListener('mouseleave', handleSwipeEnd); // Handle mouse leaving the slider area
+
   // Initialize the slider position
   updateSliderPosition();
 })();
-
   </script>
-
 </div>
 <!--Factory Slider End-->
 
-<!-- Divider Contact Leader -->
+<!-- Divider 聯絡利得 -->
 <div class="container" id="contact">
   <div class="section-divider">
     <img class="section-divider-left-img" src="./img/icons/star-glod.png" alt="Left Image" />
-    <div class="section-divider-text">Contact Leader</div>
+    <div class="section-divider-text">Contact</div>
     <div class="section-divider-line"></div>
     <img class="section-divider-right-img" src="./img/icons/start-grey.png" alt="Right Image" />
   </div>
 </div>
-<!-- Divider Contact Leader  End-->
+<!-- Divider 聯絡利得 End-->
 
 <div class="container mt-4">
   <style>
@@ -1085,36 +1297,44 @@
       margin-bottom: 10px;
     }
     .info-item .icon {
-      font-weight: bold;
+      font-weight: 400;
       margin-right: 1px;
     }
     .info-box{
-      padding-left:50px;
       padding-bottom:80px;
       font-size:24px;
-      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .info-box {
+        padding-left: 50px;
+      }
     }
     .strong{
       font-weight:900;
     }
   </style>
-  <div class="info-box">
-    <div class="info-item">
-      <span class="icon">丨</span>
-      <div>
-        <strong class="strong">Address:</strong>No. 8-12, Lane 156, Zhongzheng 3rd Road, Yingge District, New Taipei City 239, Taiwan
+  <div class="d-flex justify-content-center">
+    <div class="info-box col-10 col-sm-10 col-md-12 col-xl-12 d-flex flex-column">
+      <div class="info-item">
+        <div>
+          <strong class="strong" style="border-left: 4px solid #000; padding-left: 8px; display: inline-block; line-height: 1.0;">Address:</strong><span> No. 8-12, Lane 156, Zhongzheng 3rd Road, Yingge District, New Taipei City 239, Taiwan</span>
+        </div>
       </div>
-    </div>
-    <div class="info-item">
-      <span class="icon">丨</span>
-      <div>
-        <strong class="strong">Business Hours：</strong>Monday to Friday, 08:00 - 17:30
+      <div class="info-item">
+        <div>
+          <strong class="strong" style="border-left: 4px solid #000; padding-left: 8px; display: inline-block; line-height: 1.0;">Business Hours:</strong><span> Monday to Friday, 08:00 - 17:30</span>
+        </div>
       </div>
-    </div>
-    <div class="info-item">
-      <span class="icon">丨</span>
-      <div>
-        <strong class="strong">Service Phone：</strong>+886 2 2679 1868
+      <div class="info-item">
+        <div>
+          <strong class="strong" style="border-left: 4px solid #000; padding-left: 8px; display: inline-block; line-height: 1.0;">Phone:</strong><span> +886 2 2679 1868</span>
+        </div>
+      </div>
+      <div class="info-item">
+        <div>
+          <strong class="strong" style="border-left: 4px solid #000; padding-left: 8px; display: inline-block; line-height: 1.0;">Email:</strong><span> Bruce@leader-petfood.com</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1123,8 +1343,8 @@
     <!--地址-->
 
     <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.737509531727!2d121.3308321110904!3d24.941010541937043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681947b81f49df%3A0x3595cd14e287f500!2sNo.%208-12%E8%99%9F%2C%20Lane%20156%2C%20Zhongzhengsan%20Rd%2C%20Yingge%20District%2C%20New%20Taipei%20City%2C%20239!5e0!3m2!1sen!2stw!4v1732082622559!5m2!1sen!2stw" 
-  style="width: 100%; height: 60vh; border: 0;" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.7376523637936!2d121.3308321108408!3d24.941005677784567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681947b81f49df%3A0x3595cd14e287f500!2s8-12%2C%20Lane%20156%2C%20Zhongzheng%203rd%20Rd%2C%20Yingge%20District%2C%20New%20Taipei%20City%2C%20Taiwan%20239!5e0!3m2!1sen!2stw!4v1733454871771!5m2!1sen!2stw" 
+      style="width: 100%; height: 80vh; border: 0;" 
   allowfullscreen="" 
   loading="lazy" 
   referrerpolicy="no-referrer-when-downgrade">
@@ -1150,7 +1370,8 @@
     .footer-image {
       position: relative;
       z-index: 999999;
-      max-width: 100%;
+      max-width: 1100px;
+      min-width:300px;
       height: auto;
     }
     
@@ -1215,7 +1436,7 @@
     <style>
       .line-span {
         display: block; /* Allows it to behave like a block-level element */
-        height: 2px; /* Adjust thickness of the line */
+        height: 1px; /* Adjust thickness of the line */
         background-color: #000; /* Line color (black in this case) */
         width: 100%; /* Full-width line */
         margin: 20px 0; /* Optional: Add spacing above and below the line */
@@ -1230,6 +1451,10 @@
 
 
 <!-- Footer -->
+ 
+
+
+
 
 
 
@@ -1325,7 +1550,7 @@
     // Show/hide scroll to top button
     window.addEventListener('scroll', function() {
       const scrollButton = document.querySelector('.scroll-to-top');
-      if (window.pageYOffset > 300) { // Show button after 300px scroll
+      if (window.pageYOffset > 3400) { // Show button after 300px scroll
         scrollButton.classList.add('visible');
       } else {
         scrollButton.classList.remove('visible');
@@ -1357,7 +1582,61 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();  // Prevent default anchor behavior
   
+        // Get the target section
+        const targetId = this.getAttribute('href').substring(1);  // Get the ID from href, excluding the "#"
+        const targetElement = document.getElementById(targetId);
+        
+        // Close offcanvas if it exists
+        const offcanvas = document.querySelector('.offcanvas');
+        if (offcanvas) {
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+          if (bsOffcanvas) {
+            bsOffcanvas.hide();
+          }
+        }
+        
+        if (targetElement) {
+          // Get the position of the target element and the height of the viewport
+          const offsetTop = targetElement.offsetTop;
+          const viewportHeight = window.innerHeight;
+        // Create easing function
+        const easeInOutQuad = (t) => {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; // Faster cubic easing
+        };
+        // Get start position and calculate distance
+        const startPosition = window.pageYOffset;
+        const targetPosition = offsetTop - (viewportHeight / 3) + (targetElement.offsetHeight / 2);
+        const distance = targetPosition - startPosition;
+        
+        let startTime = null;
+        const duration = 10; // Animation duration in milliseconds
+
+        // Animation function
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+          
+          const easeProgress = easeInOutQuad(progress);
+          window.scrollTo(0, startPosition + (distance * easeProgress));
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+        }
+
+        // Start animation
+        requestAnimationFrame(animation);
+      }
+      });
+    });
+    // JavaScript code remains the same 
+  </script>
   
   
 </body>
